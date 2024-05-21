@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b2434c5-d7ba-4e2c-9a83-ffd83aa9fdb2" name="Changes" comment="Version 0.0.1, this is a test commit">
+    <list default="true" id="8b2434c5-d7ba-4e2c-9a83-ffd83aa9fdb2" name="Changes" comment="Version 0.0.2, This new version adds support for finding basic random positions for each player on the attacking team.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
     </list>
@@ -26,29 +26,32 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Main.py" root0="SKIP_INSPECTION" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2gkuBfzxlQV4KmBuVS4dBY5AKcT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "vcs.Git",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -65,7 +68,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1716253762780</updated>
-      <workItem from="1716253764753" duration="4855000" />
+      <workItem from="1716253764753" duration="5546000" />
+      <workItem from="1716264638931" duration="137000" />
+      <workItem from="1716265006215" duration="2869000" />
+      <workItem from="1716271487239" duration="898000" />
     </task>
     <task id="LOCAL-00001" summary="Version 0.0.1, this is a test commit and test.">
       <option name="closed" value="true" />
@@ -107,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716258715632</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Version 0.0.2, This new version adds support for finding basic random positions for each player on the attacking team.">
+      <option name="closed" value="true" />
+      <created>1716263334696</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1716263334697</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,9 +141,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Version 0.0.1, this is a test commit and test." />
     <MESSAGE value="Version 0.0.1, this is a test commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.0.1, this is a test commit" />
+    <MESSAGE value="Version 0.0.2, This new version adds support for finding basic random positions for each player on the attacking team." />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 0.0.2, This new version adds support for finding basic random positions for each player on the attacking team." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Valorant_Gameplay_Predictions$Main.coverage" NAME="Main Coverage Results" MODIFIED="1716260416112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Valorant_Gameplay_Predictions$Main.coverage" NAME="Main Coverage Results" MODIFIED="1716272080625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
