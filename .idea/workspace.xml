@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b2434c5-d7ba-4e2c-9a83-ffd83aa9fdb2" name="Changes" comment="" />
+    <list default="true" id="8b2434c5-d7ba-4e2c-9a83-ffd83aa9fdb2" name="Changes" comment="Version 0.0.1, this is a test commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,6 +41,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "vcs.Git",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -60,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1716253762780</updated>
-      <workItem from="1716253764753" duration="2338000" />
+      <workItem from="1716253764753" duration="2618000" />
     </task>
     <task id="LOCAL-00001" summary="Version 0.0.1, this is a test commit and test.">
       <option name="closed" value="true" />
@@ -70,14 +71,50 @@
       <option name="project" value="LOCAL" />
       <updated>1716258393469</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Version 0.0.1, this is a test commit">
+      <option name="closed" value="true" />
+      <created>1716258431306</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716258431306</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Version 0.0.1, this is a test commit">
+      <option name="closed" value="true" />
+      <created>1716258443287</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716258443287</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Version 0.0.1, this is a test commit">
+      <option name="closed" value="true" />
+      <created>1716258449464</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1716258449464</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Version 0.0.1, this is a test commit and test." />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.0.1, this is a test commit and test." />
+    <MESSAGE value="Version 0.0.1, this is a test commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 0.0.1, this is a test commit" />
   </component>
 </project>
