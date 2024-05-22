@@ -7,6 +7,7 @@ gridSizeX = 100
 gridSizeY = 100
 
 listOfDenidedSpawns = ["1,1","1,1"]
+
 valueDenidedX = 2
 valueDenidedY = 1
 
@@ -19,6 +20,10 @@ defenseSpawnRadiusMaxX = 100
 defenseSpawnRadiusMaxY = 40
 defenseSpawnRadiusMinX = 1
 defenseSpawnRadiusMinY = 1
+maxChangeX = 50
+maxChangeY = 50
+minChangeX = 5
+minChangeY = 5
 
 #For Test Push
 
@@ -336,3 +341,1788 @@ spawnPhaseLayout = (
 
 with open("spawnPhaseExample.json", "w") as f:
     json.dump(spawnPhaseLayout, f, indent=4)
+
+
+def attackRound1Player1():
+    global attackPos1X
+    global attackPos1Y
+    attackPos1X = randint(mixChangeX, maxChangeX)
+    attackPos1Y = randint(minChangeY, maxChangeY)
+    global attackPos1
+    attackPos1 = str(attackPos1X) + "," + str(attackPos1Y)
+def attackRound1Player2():
+    global attackPos2X
+    global attackPos2Y
+    attackPos2X = randint(mixChangeX, maxChangeX)
+    attackPos2Y = randint(minChangeY, maxChangeY)
+    global attackPos2
+    attackPos2 = str(attackPos2X) + "," + str(attackPos2Y)
+def attackRound1Player3():
+    global attackPos3X
+    global attackPos3Y
+    attackPos3X = randint(mixChangeX, maxChangeX)
+    attackPos3Y = randint(minChangeY, maxChangeY)
+    global attackPos3
+    attackPos3 = str(attackPos3X) + "," + str(attackPos3Y)
+def attackRound1Player4():
+    global attackPos4X
+    global attackPos4Y
+    attackPos4X = randint(mixChangeX, maxChangeX)
+    attackPos4Y = randint(minChangeY, maxChangeY)
+    global attackPos4
+    attackPos4 = str(attackPos4X) + "," + str(attackPos4Y)
+def attackRound1Player5():
+    global attackPos5X
+    global attackPos5Y
+    attackPos5X = randint(mixChangeX, maxChangeX)
+    attackPos5Y = randint(minChangeY, maxChangeY)
+    global attackPos5
+    attackPos5 = str(attackPos5X) + "," + str(attackPos5Y)
+def defenseRound1Player1():
+    global defensePos1X
+    global defensePos1Y
+    attackPos1X = randint(mixChangeX, maxChangeX)
+    attackPos1Y = randint(minChangeY, maxChangeY)
+    global defensePos1
+    defensePos1 = str(defensePos1X) + "," + str(defensePos1Y)
+def defenseRound1Player2():
+    global defensePos2X
+    global defensePos2Y
+    attackPos2X = randint(mixChangeX, maxChangeX)
+    attackPos2Y = randint(minChangeY, maxChangeY)
+    global defensePos2
+    defensePos2 = str(defensePos2X) + "," + str(defensePos2Y)
+def defenseRound1Player3():
+    global defensePos3X
+    global defensePos3Y
+    attackPos3X = randint(mixChangeX, maxChangeX)
+    attackPos3Y = randint(minChangeY, maxChangeY)
+    global defensePos3
+    defensePos3 = str(defensePos3X) + "," + str(defensePos3Y)
+def defenseRound1Player4():
+    global defensePos4X
+    global defensePos4Y
+    attackPos4X = randint(mixChangeX, maxChangeX)
+    attackPos4Y = randint(minChangeY, maxChangeY)
+    global defensePos4
+    defensePos4 = str(defensePos4X) + "," + str(defensePos4Y)
+def defenseRound1Player5():
+    global defensePos5X
+    global defensePos5Y
+    attackPos5X = randint(mixChangeX, maxChangeX)
+    attackPos5Y = randint(minChangeY, maxChangeY)
+    global defensePos5
+    defensePos5 = str(defensePos5X) + "," + str(defensePos5Y)
+def playerAttackAttackSideCheck(playerNum):
+    global isAttacked
+    global attackPlayer1Dead
+    global attackPlayer2Dead
+    global attackPlayer3Dead
+    global attackPlayer4Dead
+    global attackPlayer5Dead
+    global defensePlayer1Dead
+    global defensePlayer2Dead
+    global defensePlayer3Dead
+    global defensePlayer4Dead
+    global defensePlayer5Dead
+    isAttacked = False
+    winChance = 0
+    differnce = 0
+
+    if playerNum == "1":
+        difference = attackPos1X - defensePos1X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 1 v Defender 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer1Dead = true
+                defensePlayer1Dead = false
+                print("attack player 1 dead")
+            if winChance <= 50:
+                attackPlayer1Dead = false
+                defensePlayer1Dead = true
+                print("defense player 1 dead")
+
+        difference = defensePos1X - attackPos1X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 1 v Defender 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer1Dead = true
+                defensePlayer1Dead = false
+                print("attack player 1 dead")
+            if winChance <= 50:
+                attackPlayer1Dead = false
+                defensePlayer1Dead = true
+                print("defense player 1 dead")
+        difference = attackPos1X - defensePos2X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 1 v Defender 2")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer1Dead = true
+                defensePlayer2Dead = false
+                print("attack player 1 dead")
+            if winChance <= 50:
+                attackPlayer1Dead = false
+                defensePlayer2Dead = true
+                print("defense player 2 dead")
+        difference = defensePos2X - attackPos1X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 1 v Defender 2")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer1Dead = true
+                defensePlayer2Dead = false
+                print("attack player 1 dead")
+            if winChance <= 50:
+                attackPlayer1Dead = false
+                defensePlayer2Dead = true
+                print("defense player 2 dead")
+        difference = attackPos1X - defensePos3X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 1 v Defender 3")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer1Dead = true
+                defensePlayer3Dead = false
+                print("attack player 3 dead")
+            if winChance <= 50:
+                attackPlayer1Dead = false
+                defensePlayer3Dead = true
+                print("defense player 3 dead")
+        difference = defensePos3X - attackPos1X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 1 v Defender 3")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer1Dead = true
+                defensePlayer3Dead = false
+                print("attack player 1 dead")
+            if winChance <= 50:
+                attackPlayer1Dead = false
+                defensePlayer3Dead = true
+                print("defense player 3 dead")
+        difference = attackPos1X - defensePos4X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 1 v Defender 4")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer1Dead = true
+                defensePlayer4Dead = false
+                print("attack player 1 dead")
+            if winChance <= 50:
+                attackPlayer1Dead = false
+                defensePlayer4Dead = true
+                print("defense player 4 dead")
+        difference = defensePos4X - attackPos1X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 1 v Defender 4")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer1Dead = true
+                defensePlayer4Dead = false
+                print("attack player 1 dead")
+            if winChance <= 50:
+                attackPlayer1Dead = false
+                defensePlayer4Dead = true
+                print("defense player 4 dead")
+        difference = attackPos1X - defensePos5X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 1 v Defender 5")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer1Dead = true
+                defensePlayer5Dead = false
+                print("attack player 1 dead")
+            if winChance <= 50:
+                attackPlayer1Dead = false
+                defensePlayer5Dead = true
+                print("defense player 5 dead")
+        difference = defensePos5X - attackPos1X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 1 v Defender 5")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer1Dead = true
+                defensePlayer5Dead = false
+                print("attack player 1 dead")
+            if winChance <= 50:
+                attackPlayer1Dead = false
+                defensePlayer5Dead = true
+                print("defense player 5 dead")
+        difference = attackPos1Y - defensePos1Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 1 v Defender 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer1Dead = true
+                defensePlayer1Dead = false
+                print("attack player 1 dead")
+            if winChance <= 50:
+                attackPlayer1Dead = false
+                defensePlayer1Dead = true
+                print("defense player 1 dead")
+
+        difference = defensePos1Y - attackPos1Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 1 v Defender 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer1Dead = true
+                defensePlayer1Dead = false
+                print("attack player 1 dead")
+            if winChance <= 50:
+                attackPlayer1Dead = false
+                defensePlayer1Dead = true
+                print("defense player 1 dead")
+        difference = attackPos1Y - defensePos2Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 1 v Defender 2")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer1Dead = true
+                defensePlayer2Dead = false
+                print("attack player 1 dead")
+            if winChance <= 50:
+                attackPlayer1Dead = false
+                defensePlayer2Dead = true
+                print("defense player 2 dead")
+        difference = defensePos2Y - attackPos1Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 1 v Defender 2")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer1Dead = true
+                defensePlayer2Dead = false
+                print("attack player 1 dead")
+            if winChance <= 50:
+                attackPlayer1Dead = false
+                defensePlayer2Dead = true
+                print("defense player 2 dead")
+        difference = attackPos1Y - defensePos3Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 1 v Defender 3")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer1Dead = true
+                defensePlayer3Dead = false
+                print("attack player 3 dead")
+            if winChance <= 50:
+                attackPlayer1Dead = false
+                defensePlayer3Dead = true
+                print("defense player 3 dead")
+        difference = defensePos3Y - attackPos1Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 1 v Defender 3")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer1Dead = true
+                defensePlayer3Dead = false
+                print("attack player 1 dead")
+            if winChance <= 50:
+                attackPlayer1Dead = false
+                defensePlayer3Dead = true
+                print("defense player 3 dead")
+        difference = attackPos1Y - defensePos4Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 1 v Defender 4")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer1Dead = true
+                defensePlayer4Dead = false
+                print("attack player 1 dead")
+            if winChance <= 50:
+                attackPlayer1Dead = false
+                defensePlayer4Dead = true
+                print("defense player 4 dead")
+        difference = defensePos4Y - attackPos1Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 1 v Defender 4")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer1Dead = true
+                defensePlayer4Dead = false
+                print("attack player 1 dead")
+            if winChance <= 50:
+                attackPlayer1Dead = false
+                defensePlayer4Dead = true
+                print("defense player 4 dead")
+        difference = attackPos1Y - defensePos5Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 1 v Defender 5")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer1Dead = true
+                defensePlayer5Dead = false
+                print("attack player 1 dead")
+            if winChance <= 50:
+                attackPlayer1Dead = false
+                defensePlayer5Dead = true
+                print("defense player 5 dead")
+        difference = defensePos5Y - attackPos1Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 1 v Defender 5")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer1Dead = true
+                defensePlayer5Dead = false
+                print("attack player 1 dead")
+            if winChance <= 50:
+                attackPlayer1Dead = false
+                defensePlayer5Dead = true
+                print("defense player 5 dead")
+
+    if playerNum == "2":
+        difference = attackPos2X - defensePos1X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 2 v Defender 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer2Dead = true
+                defensePlayer1Dead = false
+                print("attack player 2 dead")
+            if winChance <= 50:
+                attackPlayer2Dead = false
+                defensePlayer1Dead = true
+                print("defense player 1 dead")
+
+        difference = defensePos1X - attackPos2X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 2 v Defender 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer2Dead = true
+                defensePlayer1Dead = false
+                print("attack player 2 dead")
+            if winChance <= 50:
+                attackPlayer2Dead = false
+                defensePlayer1Dead = true
+                print("defense player 1 dead")
+        difference = attackPos2X - defensePos2X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 2 v Defender 2")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer2Dead = true
+                defensePlayer2Dead = false
+                print("attack player 1 dead")
+            if winChance <= 50:
+                attackPlayer2Dead = false
+                defensePlayer2Dead = true
+                print("defense player 2 dead")
+        difference = defensePos2X - attackPos2X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 2 v Defender 2")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer2Dead = true
+                defensePlayer2Dead = false
+                print("attack player 2 dead")
+            if winChance <= 50:
+                attackPlayer2Dead = false
+                defensePlayer2Dead = true
+                print("defense player 2 dead")
+        difference = attackPos2X - defensePos3X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 2 v Defender 3")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer2Dead = true
+                defensePlayer3Dead = false
+                print("attack player 2 dead")
+            if winChance <= 50:
+                attackPlayer1Dead = false
+                defensePlayer3Dead = true
+                print("defense player 3 dead")
+        difference = defensePos3X - attackPos2X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 2 v Defender 3")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer2Dead = true
+                defensePlayer3Dead = false
+                print("attack player 2 dead")
+            if winChance <= 50:
+                attackPlayer2Dead = false
+                defensePlayer3Dead = true
+                print("defense player 3 dead")
+        difference = attackPos2X - defensePos4X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 2 v Defender 4")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer2Dead = true
+                defensePlayer4Dead = false
+                print("attack player 2 dead")
+            if winChance <= 50:
+                attackPlayer2Dead = false
+                defensePlayer4Dead = true
+                print("defense player 4 dead")
+        difference = defensePos4X - attackPos2X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 2 v Defender 4")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer2Dead = true
+                defensePlayer4Dead = false
+                print("attack player 2 dead")
+            if winChance <= 50:
+                attackPlayer2Dead = false
+                defensePlayer4Dead = true
+                print("defense player 4 dead")
+        difference = attackPos2X - defensePos5X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 2 v Defender 5")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer2Dead = true
+                defensePlayer5Dead = false
+                print("attack player 2 dead")
+            if winChance <= 50:
+                attackPlayer2Dead = false
+                defensePlayer5Dead = true
+                print("defense player 5 dead")
+        difference = defensePos5X - attackPos2X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 2 v Defender 5")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer2Dead = true
+                defensePlayer5Dead = false
+                print("attack player 2 dead")
+            if winChance <= 50:
+                attackPlayer2Dead = false
+                defensePlayer5Dead = true
+                print("defense player 5 dead")
+        difference = attackPos2Y - defensePos1Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 2 v Defender 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer2Dead = True
+                defensePlayer1Dead = False
+                print("attack player 2 dead")
+            if winChance <= 50:
+                attackPlayer2Dead = False
+                defensePlayer1Dead = True
+                print("defense player 1 dead")
+
+        difference = defensePos1Y - attackPos2Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 2 v Defender 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer2Dead = True
+                defensePlayer1Dead = False
+                print("attack player 2 dead")
+            if winChance <= 50:
+                attackPlayer2Dead = False
+                defensePlayer1Dead = True
+                print("defense player 1 dead")
+
+        difference = attackPos2Y - defensePos2Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 2 v Defender 2")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer2Dead = True
+                defensePlayer2Dead = False
+                print("attack player 2 dead")
+            if winChance <= 50:
+                attackPlayer2Dead = False
+                defensePlayer2Dead = True
+                print("defense player 2 dead")
+
+        difference = defensePos2Y - attackPos2Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 2 v Defender 2")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer2Dead = True
+                defensePlayer2Dead = False
+                print("attack player 2 dead")
+            if winChance <= 50:
+                attackPlayer2Dead = False
+                defensePlayer2Dead = True
+                print("defense player 2 dead")
+
+        difference = attackPos2Y - defensePos3Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 2 v Defender 3")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer2Dead = True
+                defensePlayer3Dead = False
+                print("attack player 2 dead")
+            if winChance <= 50:
+                attackPlayer2Dead = False
+                defensePlayer3Dead = True
+                print("defense player 3 dead")
+
+        difference = defensePos3Y - attackPos2Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 2 v Defender 3")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer2Dead = True
+                defensePlayer3Dead = False
+                print("attack player 2 dead")
+            if winChance <= 50:
+                attackPlayer2Dead = False
+                defensePlayer3Dead = True
+                print("defense player 3 dead")
+
+        difference = attackPos2Y - defensePos4Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 2 v Defender 4")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer2Dead = True
+                defensePlayer4Dead = False
+                print("attack player 2 dead")
+            if winChance <= 50:
+                attackPlayer2Dead = False
+                defensePlayer4Dead = True
+                print("defense player 4 dead")
+
+        difference = defensePos4Y - attackPos2Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 2 v Defender 4")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer2Dead = True
+                defensePlayer4Dead = False
+                print("attack player 2 dead")
+            if winChance <= 50:
+                attackPlayer2Dead = False
+                defensePlayer4Dead = True
+                print("defense player 4 dead")
+
+        difference = attackPos2Y - defensePos5Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 2 v Defender 5")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer2Dead = True
+                defensePlayer5Dead = False
+                print("attack player 2 dead")
+            if winChance <= 50:
+                attackPlayer2Dead = False
+                defensePlayer5Dead = True
+                print("defense player 5 dead")
+
+        difference = defensePos5Y - attackPos2Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 2 v Defender 5")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer2Dead = True
+                defensePlayer5Dead = False
+                print("attack player 2 dead")
+            if winChance <= 50:
+                attackPlayer2Dead = False
+                defensePlayer5Dead = True
+                print("defense player 5 dead")
+    if playerNum == "3":
+        difference = attackPos3X - defensePos1X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 3 v Defender 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer3Dead = True
+                defensePlayer1Dead = False
+                print("attack player 3 dead")
+            if winChance <= 50:
+                attackPlayer3Dead = False
+                defensePlayer1Dead = True
+                print("defense player 1 dead")
+
+        difference = defensePos1X - attackPos3X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 3 v Defender 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer3Dead = True
+                defensePlayer1Dead = False
+                print("attack player 3 dead")
+            if winChance <= 50:
+                attackPlayer3Dead = False
+                defensePlayer1Dead = True
+                print("defense player 1 dead")
+
+        difference = attackPos3X - defensePos2X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 3 v Defender 2")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer3Dead = True
+                defensePlayer2Dead = False
+                print("attack player 3 dead")
+            if winChance <= 50:
+                attackPlayer3Dead = False
+                defensePlayer2Dead = True
+                print("defense player 2 dead")
+
+        difference = defensePos2X - attackPos3X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 3 v Defender 2")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer3Dead = True
+                defensePlayer2Dead = False
+                print("attack player 3 dead")
+            if winChance <= 50:
+                attackPlayer3Dead = False
+                defensePlayer2Dead = True
+                print("defense player 2 dead")
+
+        difference = attackPos3X - defensePos3X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 3 v Defender 3")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer3Dead = True
+                defensePlayer3Dead = False
+                print("attack player 3 dead")
+            if winChance <= 50:
+                attackPlayer3Dead = False
+                defensePlayer3Dead = True
+                print("defense player 3 dead")
+
+        difference = defensePos3X - attackPos3X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 3 v Defender 3")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer3Dead = True
+                defensePlayer3Dead = False
+                print("attack player 3 dead")
+            if winChance <= 50:
+                attackPlayer3Dead = False
+                defensePlayer3Dead = True
+                print("defense player 3 dead")
+
+        difference = attackPos3X - defensePos4X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 3 v Defender 4")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer3Dead = True
+                defensePlayer4Dead = False
+                print("attack player 3 dead")
+            if winChance <= 50:
+                attackPlayer3Dead = False
+                defensePlayer4Dead = True
+                print("defense player 4 dead")
+
+        difference = defensePos4X - attackPos3X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 3 v Defender 4")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer3Dead = True
+                defensePlayer4Dead = False
+                print("attack player 3 dead")
+            if winChance <= 50:
+                attackPlayer3Dead = False
+                defensePlayer4Dead = True
+                print("defense player 4 dead")
+
+        difference = attackPos3X - defensePos5X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 3 v Defender 5")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer3Dead = True
+                defensePlayer5Dead = False
+                print("attack player 3 dead")
+            if winChance <= 50:
+                attackPlayer3Dead = False
+                defensePlayer5Dead = True
+                print("defense player 5 dead")
+
+        difference = defensePos5X - attackPos3X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 3 v Defender 5")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer3Dead = True
+                defensePlayer5Dead = False
+                print("attack player 3 dead")
+            if winChance <= 50:
+                attackPlayer3Dead = False
+                defensePlayer5Dead = True
+                print("defense player 5 dead")
+
+        difference = attackPos3Y - defensePos1Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 3 v Defender 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer3Dead = True
+                defensePlayer1Dead = False
+                print("attack player 3 dead")
+            if winChance <= 50:
+                attackPlayer3Dead = False
+                defensePlayer1Dead = True
+                print("defense player 1 dead")
+
+        difference = defensePos1Y - attackPos3Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 3 v Defender 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer3Dead = True
+                defensePlayer1Dead = False
+                print("attack player 3 dead")
+            if winChance <= 50:
+                attackPlayer3Dead = False
+                defensePlayer1Dead = True
+                print("defense player 1 dead")
+
+        difference = attackPos3Y - defensePos2Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 3 v Defender 2")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer3Dead = True
+                defensePlayer2Dead = False
+                print("attack player 3 dead")
+            if winChance <= 50:
+                attackPlayer3Dead = False
+                defensePlayer2Dead = True
+                print("defense player 2 dead")
+
+        difference = defensePos2Y - attackPos3Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 3 v Defender 2")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer3Dead = True
+                defensePlayer2Dead = False
+                print("attack player 3 dead")
+            if winChance <= 50:
+                attackPlayer3Dead = False
+                defensePlayer2Dead = True
+                print("defense player 2 dead")
+
+        difference = attackPos3Y - defensePos3Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 3 v Defender 3")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer3Dead = True
+                defensePlayer3Dead = False
+                print("attack player 3 dead")
+            if winChance <= 50:
+                attackPlayer3Dead = False
+                defensePlayer3Dead = True
+                print("defense player 3 dead")
+
+        difference = defensePos3Y - attackPos3Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 3 v Defender 3")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer3Dead = True
+                defensePlayer3Dead = False
+                print("attack player 3 dead")
+            if winChance <= 50:
+                attackPlayer3Dead = False
+                defensePlayer3Dead = True
+                print("defense player 3 dead")
+
+        difference = attackPos3Y - defensePos4Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 3 v Defender 4")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer3Dead = True
+                defensePlayer4Dead = False
+                print("attack player 3 dead")
+            if winChance <= 50:
+                attackPlayer3Dead = False
+                defensePlayer4Dead = True
+                print("defense player 4 dead")
+
+        difference = defensePos4Y - attackPos3Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 3 v Defender 4")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer3Dead = True
+                defensePlayer4Dead = False
+                print("attack player 3 dead")
+            if winChance <= 50:
+                attackPlayer3Dead = False
+                defensePlayer4Dead = True
+                print("defense player 4 dead")
+
+        difference = attackPos3Y - defensePos5Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 3 v Defender 5")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer3Dead = True
+                defensePlayer5Dead = False
+                print("attack player 3 dead")
+            if winChance <= 50:
+                attackPlayer3Dead = False
+                defensePlayer5Dead = True
+                print("defense player 5 dead")
+
+        difference = defensePos5Y - attackPos3Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 3 v Defender 5")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer3Dead = True
+                defensePlayer5Dead = False
+                print("attack player 3 dead")
+            if winChance <= 50:
+                attackPlayer3Dead = False
+                defensePlayer5Dead = True
+                print("defense player 5 dead")
+    if playerNum == "4":
+        difference = attackPos4X - defensePos1X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 4 v Defender 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer4Dead = True
+                defensePlayer1Dead = False
+                print("attack player 4 dead")
+            if winChance <= 50:
+                attackPlayer4Dead = False
+                defensePlayer1Dead = True
+                print("defense player 1 dead")
+
+        difference = defensePos1X - attackPos4X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 4 v Defender 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer4Dead = True
+                defensePlayer1Dead = False
+                print("attack player 4 dead")
+            if winChance <= 50:
+                attackPlayer4Dead = False
+                defensePlayer1Dead = True
+                print("defense player 1 dead")
+
+        difference = attackPos4X - defensePos2X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 4 v Defender 2")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer4Dead = True
+                defensePlayer2Dead = False
+                print("attack player 4 dead")
+            if winChance <= 50:
+                attackPlayer4Dead = False
+                defensePlayer2Dead = True
+                print("defense player 2 dead")
+
+        difference = defensePos2X - attackPos4X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 4 v Defender 2")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer4Dead = True
+                defensePlayer2Dead = False
+                print("attack player 4 dead")
+            if winChance <= 50:
+                attackPlayer4Dead = False
+                defensePlayer2Dead = True
+                print("defense player 2 dead")
+
+        difference = attackPos4X - defensePos3X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 4 v Defender 3")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer4Dead = True
+                defensePlayer3Dead = False
+                print("attack player 4 dead")
+            if winChance <= 50:
+                attackPlayer4Dead = False
+                defensePlayer3Dead = True
+                print("defense player 3 dead")
+
+        difference = defensePos3X - attackPos4X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 4 v Defender 3")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer4Dead = True
+                defensePlayer3Dead = False
+                print("attack player 4 dead")
+            if winChance <= 50:
+                attackPlayer4Dead = False
+                defensePlayer3Dead = True
+                print("defense player 3 dead")
+
+        difference = attackPos4X - defensePos4X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 4 v Defender 4")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer4Dead = True
+                defensePlayer4Dead = False
+                print("attack player 4 dead")
+            if winChance <= 50:
+                attackPlayer4Dead = False
+                defensePlayer4Dead = True
+                print("defense player 4 dead")
+
+        difference = defensePos4X - attackPos4X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 4 v Defender 4")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer4Dead = True
+                defensePlayer4Dead = False
+                print("attack player 4 dead")
+            if winChance <= 50:
+                attackPlayer4Dead = False
+                defensePlayer4Dead = True
+                print("defense player 4 dead")
+
+        difference = attackPos4X - defensePos5X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 4 v Defender 5")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer4Dead = True
+                defensePlayer5Dead = False
+                print("attack player 4 dead")
+            if winChance <= 50:
+                attackPlayer4Dead = False
+                defensePlayer5Dead = True
+                print("defense player 5 dead")
+
+        difference = defensePos5X - attackPos4X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 4 v Defender 5")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer4Dead = True
+                defensePlayer5Dead = False
+                print("attack player 4 dead")
+            if winChance <= 50:
+                attackPlayer4Dead = False
+                defensePlayer5Dead = True
+                print("defense player 5 dead")
+
+        difference = attackPos4Y - defensePos1Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 4 v Defender 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer4Dead = True
+                defensePlayer1Dead = False
+                print("attack player 4 dead")
+            if winChance <= 50:
+                attackPlayer4Dead = False
+                defensePlayer1Dead = True
+                print("defense player 1 dead")
+
+        difference = defensePos1Y - attackPos4Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 4 v Defender 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer4Dead = True
+                defensePlayer1Dead = False
+                print("attack player 4 dead")
+            if winChance <= 50:
+                attackPlayer4Dead = False
+                defensePlayer1Dead = True
+                print("defense player 1 dead")
+
+        difference = attackPos4Y - defensePos2Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 4 v Defender 2")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer4Dead = True
+                defensePlayer2Dead = False
+                print("attack player 4 dead")
+            if winChance <= 50:
+                attackPlayer4Dead = False
+                defensePlayer2Dead = True
+                print("defense player 2 dead")
+
+        difference = defensePos2Y - attackPos4Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 4 v Defender 2")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer4Dead = True
+                defensePlayer2Dead = False
+                print("attack player 4 dead")
+            if winChance <= 50:
+                attackPlayer4Dead = False
+                defensePlayer2Dead = True
+                print("defense player 2 dead")
+
+        difference = attackPos4Y - defensePos3Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 4 v Defender 3")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer4Dead = True
+                defensePlayer3Dead = False
+                print("attack player 4 dead")
+            if winChance <= 50:
+                attackPlayer4Dead = False
+                defensePlayer3Dead = True
+                print("defense player 3 dead")
+
+        difference = defensePos3Y - attackPos4Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 4 v Defender 3")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer4Dead = True
+                defensePlayer3Dead = False
+                print("attack player 4 dead")
+            if winChance <= 50:
+                attackPlayer4Dead = False
+                defensePlayer3Dead = True
+                print("defense player 3 dead")
+
+        difference = attackPos4Y - defensePos4Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 4 v Defender 4")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer4Dead = True
+                defensePlayer4Dead = False
+                print("attack player 4 dead")
+            if winChance <= 50:
+                attackPlayer4Dead = False
+                defensePlayer4Dead = True
+                print("defense player 4 dead")
+
+        difference = defensePos4Y - attackPos4Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 4 v Defender 4")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer4Dead = True
+                defensePlayer4Dead = False
+                print("attack player 4 dead")
+            if winChance <= 50:
+                attackPlayer4Dead = False
+                defensePlayer4Dead = True
+                print("defense player 4 dead")
+
+        difference = attackPos4Y - defensePos5Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 4 v Defender 5")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer4Dead = True
+                defensePlayer5Dead = False
+                print("attack player 4 dead")
+            if winChance <= 50:
+                attackPlayer4Dead = False
+                defensePlayer5Dead = True
+                print("defense player 5 dead")
+
+        difference = defensePos5Y - attackPos4Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 4 v Defender 5")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer4Dead = True
+                defensePlayer5Dead = False
+                print("attack player 4 dead")
+            if winChance <= 50:
+                attackPlayer4Dead = False
+                defensePlayer5Dead = True
+                print("defense player 5 dead")
+    if playerNum == "5":
+        difference = attackPos5X - defensePos1X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 5 v Defender 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer5Dead = True
+                defensePlayer1Dead = False
+                print("attack player 5 dead")
+            if winChance <= 50:
+                attackPlayer5Dead = False
+                defensePlayer1Dead = True
+                print("defense player 1 dead")
+
+        difference = defensePos1X - attackPos5X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 5 v Defender 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer5Dead = True
+                defensePlayer1Dead = False
+                print("attack player 5 dead")
+            if winChance <= 50:
+                attackPlayer5Dead = False
+                defensePlayer1Dead = True
+                print("defense player 1 dead")
+
+        difference = attackPos5X - defensePos2X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 5 v Defender 2")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer5Dead = True
+                defensePlayer2Dead = False
+                print("attack player 5 dead")
+            if winChance <= 50:
+                attackPlayer5Dead = False
+                defensePlayer2Dead = True
+                print("defense player 2 dead")
+
+        difference = defensePos2X - attackPos5X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 5 v Defender 2")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer5Dead = True
+                defensePlayer2Dead = False
+                print("attack player 5 dead")
+            if winChance <= 50:
+                attackPlayer5Dead = False
+                defensePlayer2Dead = True
+                print("defense player 2 dead")
+
+        difference = attackPos5X - defensePos3X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 5 v Defender 3")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer5Dead = True
+                defensePlayer3Dead = False
+                print("attack player 5 dead")
+            if winChance <= 50:
+                attackPlayer5Dead = False
+                defensePlayer3Dead = True
+                print("defense player 3 dead")
+
+        difference = defensePos3X - attackPos5X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 5 v Defender 3")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer5Dead = True
+                defensePlayer3Dead = False
+                print("attack player 5 dead")
+            if winChance <= 50:
+                attackPlayer5Dead = False
+                defensePlayer3Dead = True
+                print("defense player 3 dead")
+
+        difference = attackPos5X - defensePos4X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 5 v Defender 4")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer5Dead = True
+                defensePlayer4Dead = False
+                print("attack player 5 dead")
+            if winChance <= 50:
+                attackPlayer5Dead = False
+                defensePlayer4Dead = True
+                print("defense player 4 dead")
+
+        difference = defensePos4X - attackPos5X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 5 v Defender 4")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer5Dead = True
+                defensePlayer4Dead = False
+                print("attack player 5 dead")
+            if winChance <= 50:
+                attackPlayer5Dead = False
+                defensePlayer4Dead = True
+                print("defense player 4 dead")
+
+        difference = attackPos5X - defensePos5X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 5 v Defender 5")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer5Dead = True
+                defensePlayer5Dead = False
+                print("attack player 5 dead")
+            if winChance <= 50:
+                attackPlayer5Dead = False
+                defensePlayer5Dead = True
+                print("defense player 5 dead")
+
+        difference = defensePos5X - attackPos5X
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 5 v Defender 5")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer5Dead = True
+                defensePlayer5Dead = False
+                print("attack player 5 dead")
+            if winChance <= 50:
+                attackPlayer5Dead = False
+                defensePlayer5Dead = True
+                print("defense player 5 dead")
+
+        difference = attackPos5Y - defensePos1Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 5 v Defender 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer5Dead = True
+                defensePlayer1Dead = False
+                print("attack player 5 dead")
+            if winChance <= 50:
+                attackPlayer5Dead = False
+                defensePlayer1Dead = True
+                print("defense player 1 dead")
+
+        difference = defensePos1Y - attackPos5Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 5 v Defender 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer5Dead = True
+                defensePlayer1Dead = False
+                print("attack player 5 dead")
+            if winChance <= 50:
+                attackPlayer5Dead = False
+                defensePlayer1Dead = True
+                print("defense player 1 dead")
+
+        difference = attackPos5Y - defensePos2Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 5 v Defender 2")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer5Dead = True
+                defensePlayer2Dead = False
+                print("attack player 5 dead")
+            if winChance <= 50:
+                attackPlayer5Dead = False
+                defensePlayer2Dead = True
+                print("defense player 2 dead")
+
+        difference = defensePos2Y - attackPos5Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 5 v Defender 2")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer5Dead = True
+                defensePlayer2Dead = False
+                print("attack player 5 dead")
+            if winChance <= 50:
+                attackPlayer5Dead = False
+                defensePlayer2Dead = True
+                print("defense player 2 dead")
+
+        difference = attackPos5Y - defensePos3Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 5 v Defender 3")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer5Dead = True
+                defensePlayer3Dead = False
+                print("attack player 5 dead")
+            if winChance <= 50:
+                attackPlayer5Dead = False
+                defensePlayer3Dead = True
+                print("defense player 3 dead")
+
+        difference = defensePos3Y - attackPos5Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 5 v Defender 3")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer5Dead = True
+                defensePlayer3Dead = False
+                print("attack player 5 dead")
+            if winChance <= 50:
+                attackPlayer5Dead = False
+                defensePlayer3Dead = True
+                print("defense player 3 dead")
+
+        difference = attackPos5Y - defensePos4Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 5 v Defender 4")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer5Dead = True
+                defensePlayer4Dead = False
+                print("attack player 5 dead")
+            if winChance <= 50:
+                attackPlayer5Dead = False
+                defensePlayer4Dead = True
+                print("defense player 4 dead")
+
+        difference = defensePos4Y - attackPos5Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 5 v Defender 4")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer5Dead = True
+                defensePlayer4Dead = False
+                print("attack player 5 dead")
+            if winChance <= 50:
+                attackPlayer5Dead = False
+                defensePlayer4Dead = True
+                print("defense player 4 dead")
+
+        difference = attackPos5Y - defensePos5Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 5 v Defender 5")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer5Dead = True
+                defensePlayer5Dead = False
+                print("attack player 5 dead")
+            if winChance <= 50:
+                attackPlayer5Dead = False
+                defensePlayer5Dead = True
+                print("defense player 5 dead")
+
+        difference = defensePos5Y - attackPos5Y
+        if difference <= 10:
+            isAttacked = True
+            print("Attacker 5 v Defender 5")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                attackPlayer5Dead = True
+                defensePlayer5Dead = False
+                print("attack player 5 dead")
+            if winChance <= 50:
+                attackPlayer5Dead = False
+                defensePlayer5Dead = True
+                print("defense player 5 dead")
+def playerAttackDefenseSideCheck(playerNum):
+    global isAttacked
+    global attackPlayer1Dead
+    global attackPlayer2Dead
+    global attackPlayer3Dead
+    global attackPlayer4Dead
+    global attackPlayer5Dead
+    global defensePlayer1Dead
+    global defensePlayer2Dead
+    global defensePlayer3Dead
+    global defensePlayer4Dead
+    global defensePlayer5Dead
+    isAttacked = False
+    winChance = 0
+    differnce = 0
+
+    if playerNum == "1":
+        difference = defensePos1X - attackPos1X
+        if difference <= 10:
+            isAttacked = True
+            print("Defender 1 v Attacker 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                defensePlayer1Dead = True
+                attackPlayer1Dead = False
+                print("defense player 1 dead")
+            if winChance <= 50:
+                defensePlayer1Dead = False
+                attackPlayer1Dead = True
+                print("attack player 1 dead")
+
+        difference = attackPos1X - defensePos1X
+        if difference <= 10:
+            isAttacked = True
+            print("Defender 1 v Attacker 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                defensePlayer1Dead = True
+                attackPlayer1Dead = False
+                print("defense player 1 dead")
+            if winChance <= 50:
+                defensePlayer1Dead = False
+                attackPlayer1Dead = True
+                print("attack player 1 dead")
+
+        difference = defensePos2X - attackPos1X
+        if difference <= 10:
+            isAttacked = True
+            print("Defender 2 v Attacker 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                defensePlayer2Dead = True
+                attackPlayer1Dead = False
+                print("defense player 2 dead")
+            if winChance <= 50:
+                defensePlayer2Dead = False
+                attackPlayer1Dead = True
+                print("attack player 1 dead")
+
+        difference = attackPos1X - defensePos2X
+        if difference <= 10:
+            isAttacked = True
+            print("Defender 2 v Attacker 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                defensePlayer2Dead = True
+                attackPlayer1Dead = False
+                print("defense player 2 dead")
+            if winChance <= 50:
+                defensePlayer2Dead = False
+                attackPlayer1Dead = True
+                print("attack player 1 dead")
+
+        difference = defensePos3X - attackPos1X
+        if difference <= 10:
+            isAttacked = True
+            print("Defender 3 v Attacker 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                defensePlayer3Dead = True
+                attackPlayer1Dead = False
+                print("defense player 3 dead")
+            if winChance <= 50:
+                defensePlayer3Dead = False
+                attackPlayer1Dead = True
+                print("attack player 1 dead")
+
+        difference = attackPos1X - defensePos3X
+        if difference <= 10:
+            isAttacked = True
+            print("Defender 3 v Attacker 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                defensePlayer3Dead = True
+                attackPlayer1Dead = False
+                print("defense player 3 dead")
+            if winChance <= 50:
+                defensePlayer3Dead = False
+                attackPlayer1Dead = True
+                print("attack player 1 dead")
+
+        difference = defensePos4X - attackPos1X
+        if difference <= 10:
+            isAttacked = True
+            print("Defender 4 v Attacker 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                defensePlayer4Dead = True
+                attackPlayer1Dead = False
+                print("defense player 4 dead")
+            if winChance <= 50:
+                defensePlayer4Dead = False
+                attackPlayer1Dead = True
+                print("attack player 1 dead")
+
+        difference = attackPos1X - defensePos4X
+        if difference <= 10:
+            isAttacked = True
+            print("Defender 4 v Attacker 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                defensePlayer4Dead = True
+                attackPlayer1Dead = False
+                print("defense player 4 dead")
+            if winChance <= 50:
+                defensePlayer4Dead = False
+                attackPlayer1Dead = True
+                print("attack player 1 dead")
+
+        difference = defensePos5X - attackPos1X
+        if difference <= 10:
+            isAttacked = True
+            print("Defender 5 v Attacker 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                defensePlayer5Dead = True
+                attackPlayer1Dead = False
+                print("defense player 5 dead")
+            if winChance <= 50:
+                defensePlayer5Dead = False
+                attackPlayer1Dead = True
+                print("attack player 1 dead")
+
+        difference = attackPos1X - defensePos5X
+        if difference <= 10:
+            isAttacked = True
+            print("Defender 5 v Attacker 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                defensePlayer5Dead = True
+                attackPlayer1Dead = False
+                print("defense player 5 dead")
+            if winChance <= 50:
+                defensePlayer5Dead = False
+                attackPlayer1Dead = True
+                print("attack player 1 dead")
+
+        difference = defensePos1Y - attackPos1Y
+        if difference <= 10:
+            isAttacked = True
+            print("Defender 1 v Attacker 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                defensePlayer1Dead = True
+                attackPlayer1Dead = False
+                print("defense player 1 dead")
+            if winChance <= 50:
+                defensePlayer1Dead = False
+                attackPlayer1Dead = True
+                print("attack player 1 dead")
+
+        difference = attackPos1Y - defensePos1Y
+        if difference <= 10:
+            isAttacked = True
+            print("Defender 1 v Attacker 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                defensePlayer1Dead = True
+                attackPlayer1Dead = False
+                print("defense player 1 dead")
+            if winChance <= 50:
+                defensePlayer1Dead = False
+                attackPlayer1Dead = True
+                print("attack player 1 dead")
+
+        difference = defensePos2Y - attackPos1Y
+        if difference <= 10:
+            isAttacked = True
+            print("Defender 2 v Attacker 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                defensePlayer2Dead = True
+                attackPlayer1Dead = False
+                print("defense player 2 dead")
+            if winChance <= 50:
+                defensePlayer2Dead = False
+                attackPlayer1Dead = True
+                print("attack player 1 dead")
+
+        difference = attackPos1Y - defensePos2Y
+        if difference <= 10:
+            isAttacked = True
+            print("Defender 2 v Attacker 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                defensePlayer2Dead = True
+                attackPlayer1Dead = False
+                print("defense player 2 dead")
+            if winChance <= 50:
+                defensePlayer2Dead = False
+                attackPlayer1Dead = True
+                print("attack player 1 dead")
+
+        difference = defensePos3Y - attackPos1Y
+        if difference <= 10:
+            isAttacked = True
+            print("Defender 3 v Attacker 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                defensePlayer3Dead = True
+                attackPlayer1Dead = False
+                print("defense player 3 dead")
+            if winChance <= 50:
+                defensePlayer3Dead = False
+                attackPlayer1Dead = True
+                print("attack player 1 dead")
+
+        difference = attackPos1Y - defensePos3Y
+        if difference <= 10:
+            isAttacked = True
+            print("Defender 3 v Attacker 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                defensePlayer3Dead = True
+                attackPlayer1Dead = False
+                print("defense player 3 dead")
+            if winChance <= 50:
+                defensePlayer3Dead = False
+                attackPlayer1Dead = True
+                print("attack player 1 dead")
+
+        difference = defensePos4Y - attackPos1Y
+        if difference <= 10:
+            isAttacked = True
+            print("Defender 4 v Attacker 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                defensePlayer4Dead = True
+                attackPlayer1Dead = False
+                print("defense player 4 dead")
+            if winChance <= 50:
+                defensePlayer4Dead = False
+                attackPlayer1Dead = True
+                print("attack player 1 dead")
+
+        difference = attackPos1Y - defensePos4Y
+        if difference <= 10:
+            isAttacked = True
+            print("Defender 4 v Attacker 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                defensePlayer4Dead = True
+                attackPlayer1Dead = False
+                print("defense player 4 dead")
+            if winChance <= 50:
+                defensePlayer4Dead = False
+                attackPlayer1Dead = True
+                print("attack player 1 dead")
+
+        difference = defensePos5Y - attackPos1Y
+        if difference <= 10:
+            isAttacked = True
+            print("Defender 5 v Attacker 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                defensePlayer5Dead = True
+                attackPlayer1Dead = False
+                print("defense player 5 dead")
+            if winChance <= 50:
+                defensePlayer5Dead = False
+                attackPlayer1Dead = True
+                print("attack player 1 dead")
+
+        difference = attackPos1Y - defensePos5Y
+        if difference <= 10:
+            isAttacked = True
+            print("Defender 5 v Attacker 1")
+            winChance = randint(1, 100)
+            if winChance >= 50:
+                defensePlayer5Dead = True
+                attackPlayer1Dead = False
+                print("defense player 5 dead")
+            if winChance <= 50:
+                defensePlayer5Dead = False
+                attackPlayer1Dead = True
+                print("attack player 1 dead")
+
+
+def attackRound1BondaryCheck1():
+    spawnAccepted = False
+    while spawnAccepted == False:
+        attackRound1Player1()
+        if attackPos1 in listOfDenidedSpawns:
+            spawnAccepted = False
+            print("Attack Spawn Denided")
+        else:
+            spawnAccepted = True
+            print("Attack Spawn Accepted")
+            print("Attack Player 1, X - " + str(attackPos1X) + ", Y - " + str(attackPos1Y))
+            playerAttackSideCheck(1)
+def defenseRoundBondaryCheck1():
+    currentNumber = 1
+    spawnAccepted = False
+    while spawnAccepted == False:
+        defenseRound1Player1()
+        if defensePos1 in listOfDenidedSpawns:
+            spawnAccepted = False
+            print("Denfense Spawn Denided")
+        else:
+            spawnAccepted = True
+            print("Denfense Spawn Accepted")
+            print("Defense Player 1, X - " + str(defensePos1X) + ", Y - " + str(defensePos1Y))

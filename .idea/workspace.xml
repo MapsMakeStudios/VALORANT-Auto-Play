@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b2434c5-d7ba-4e2c-9a83-ffd83aa9fdb2" name="Changes" comment="Version 0.0.5, This version adds extra features and a lot of debugging such as, &#10;- Test Commit and Push">
-      <change afterPath="$PROJECT_DIR$/spawnPhase.json" afterDir="false" />
+    <list default="true" id="8b2434c5-d7ba-4e2c-9a83-ffd83aa9fdb2" name="Changes" comment="Version 0.0.6, This version adds extra features and a lot of debugging such as, &#10;- Fixed terminal spam when a spawn is declined&#10;- Added a json file for future replay support">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
     </list>
@@ -87,7 +86,7 @@
       <workItem from="1716253764753" duration="5546000" />
       <workItem from="1716264638931" duration="137000" />
       <workItem from="1716265006215" duration="2869000" />
-      <workItem from="1716271487239" duration="14488000" />
+      <workItem from="1716271487239" duration="24123000" />
     </task>
     <task id="LOCAL-00001" summary="Version 0.0.1, this is a test commit and test.">
       <option name="closed" value="true" />
@@ -169,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716342771017</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Version 0.0.6, This version adds extra features and a lot of debugging such as, &#10;- Fixed terminal spam when a spawn is declined&#10;- Added a json file for future replay support">
+      <option name="closed" value="true" />
+      <created>1716345988714</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1716345988714</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,7 +202,8 @@
     <MESSAGE value="Version 0.0.4, This version adds extra features and a lot of debugging such as, &#10;- Adding Boundary Checking for defense players when spawning&#10;- Adding a way to calculate all areas inside of non spawnable boundary boxes&#10;- Fixed Debugging text errors when printing positions of players on the defense team." />
     <MESSAGE value="Version 0.0.5, This version adds extra features and a lot of debugging such as, &#10;- Adding Boundary Checking for the attack side as well as the defense side&#10;- Fixing future-proof problems with function names&#10;- Reducing wait times for the spawn information to be produced.&#10;- removing white space in code&#10;- Fixing spawn radius of both attack and defense side" />
     <MESSAGE value="Version 0.0.5, This version adds extra features and a lot of debugging such as, &#10;- Test Commit and Push" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.0.5, This version adds extra features and a lot of debugging such as, &#10;- Test Commit and Push" />
+    <MESSAGE value="Version 0.0.6, This version adds extra features and a lot of debugging such as, &#10;- Fixed terminal spam when a spawn is declined&#10;- Added a json file for future replay support" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 0.0.6, This version adds extra features and a lot of debugging such as, &#10;- Fixed terminal spam when a spawn is declined&#10;- Added a json file for future replay support" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Valorant_Gameplay_Predictions$Main.coverage" NAME="Main Coverage Results" MODIFIED="1716345650290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
