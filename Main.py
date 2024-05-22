@@ -17,6 +17,7 @@ defenseSpawnRadiusMaxY = 40
 defenseSpawnRadiusMinX = 1
 defenseSpawnRadiusMinY = 1
 
+#For Test Push
 
 for i in range(12):
     valueDenidedX = 1
