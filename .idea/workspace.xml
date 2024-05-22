@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b2434c5-d7ba-4e2c-9a83-ffd83aa9fdb2" name="Changes" comment="Version 0.0.5, This version adds extra features and a lot of debugging such as, &#10;- Adding Boundary Checking for the attack side as well as the defense side&#10;- Fixing future-proof problems with function names&#10;- Reducing wait times for the spawn information to be produced.&#10;- removing white space in code&#10;- Fixing spawn radius of both attack and defense side" />
+    <list default="true" id="8b2434c5-d7ba-4e2c-9a83-ffd83aa9fdb2" name="Changes" comment="Version 0.0.5, This version adds extra features and a lot of debugging such as, &#10;- Test Commit and Push">
+      <change afterPath="$PROJECT_DIR$/spawnPhase.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,25 +46,28 @@
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="2gkuBfzxlQV4KmBuVS4dBY5AKcT" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Python.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -80,7 +87,7 @@
       <workItem from="1716253764753" duration="5546000" />
       <workItem from="1716264638931" duration="137000" />
       <workItem from="1716265006215" duration="2869000" />
-      <workItem from="1716271487239" duration="11600000" />
+      <workItem from="1716271487239" duration="14488000" />
     </task>
     <task id="LOCAL-00001" summary="Version 0.0.1, this is a test commit and test.">
       <option name="closed" value="true" />
@@ -154,7 +161,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716342429897</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Version 0.0.5, This version adds extra features and a lot of debugging such as, &#10;- Test Commit and Push">
+      <option name="closed" value="true" />
+      <created>1716342771017</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1716342771017</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,15 +187,17 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Version 0.0.1, this is a test commit and test." />
     <MESSAGE value="Version 0.0.1, this is a test commit" />
     <MESSAGE value="Version 0.0.2, This new version adds support for finding basic random positions for each player on the attacking team." />
     <MESSAGE value="Version 0.0.3, This version adds extra features and a lot of debugging such as, &#10;- Adding Defense attack starting positions&#10;- Fixing problems with incorrect bounding boxes of start phase areas for the different sides&#10;- Fixed Variable misplacement" />
     <MESSAGE value="Version 0.0.4, This version adds extra features and a lot of debugging such as, &#10;- Adding Boundary Checking for defense players when spawning&#10;- Adding a way to calculate all areas inside of non spawnable boundary boxes&#10;- Fixed Debugging text errors when printing positions of players on the defense team." />
     <MESSAGE value="Version 0.0.5, This version adds extra features and a lot of debugging such as, &#10;- Adding Boundary Checking for the attack side as well as the defense side&#10;- Fixing future-proof problems with function names&#10;- Reducing wait times for the spawn information to be produced.&#10;- removing white space in code&#10;- Fixing spawn radius of both attack and defense side" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.0.5, This version adds extra features and a lot of debugging such as, &#10;- Adding Boundary Checking for the attack side as well as the defense side&#10;- Fixing future-proof problems with function names&#10;- Reducing wait times for the spawn information to be produced.&#10;- removing white space in code&#10;- Fixing spawn radius of both attack and defense side" />
+    <MESSAGE value="Version 0.0.5, This version adds extra features and a lot of debugging such as, &#10;- Test Commit and Push" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 0.0.5, This version adds extra features and a lot of debugging such as, &#10;- Test Commit and Push" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Valorant_Gameplay_Predictions$Main.coverage" NAME="Main Coverage Results" MODIFIED="1716340985472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Valorant_Gameplay_Predictions$Main.coverage" NAME="Main Coverage Results" MODIFIED="1716345650290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
