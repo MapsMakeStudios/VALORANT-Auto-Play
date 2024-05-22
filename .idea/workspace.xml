@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b2434c5-d7ba-4e2c-9a83-ffd83aa9fdb2" name="Changes" comment="Version 0.0.2, This new version adds support for finding basic random positions for each player on the attacking team.">
+    <list default="true" id="8b2434c5-d7ba-4e2c-9a83-ffd83aa9fdb2" name="Changes" comment="Version 0.0.3, This version adds extra features and a lot of debugging such as, &#10;- Adding Defense attack starting positions&#10;- Fixing problems with incorrect bounding boxes of start phase areas for the different sides&#10;- Fixed Variable misplacement">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
     </list>
@@ -27,7 +27,7 @@
     <setting file="file://$PROJECT_DIR$/Main.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -71,7 +71,7 @@
       <workItem from="1716253764753" duration="5546000" />
       <workItem from="1716264638931" duration="137000" />
       <workItem from="1716265006215" duration="2869000" />
-      <workItem from="1716271487239" duration="898000" />
+      <workItem from="1716271487239" duration="8326000" />
     </task>
     <task id="LOCAL-00001" summary="Version 0.0.1, this is a test commit and test.">
       <option name="closed" value="true" />
@@ -121,7 +121,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716263334697</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Version 0.0.3, This version adds extra features and a lot of debugging such as, &#10;- Adding Defense attack starting positions&#10;- Fixing problems with incorrect bounding boxes of start phase areas for the different sides&#10;- Fixed Variable misplacement">
+      <option name="closed" value="true" />
+      <created>1716272555198</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1716272555198</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,9 +150,10 @@
     <MESSAGE value="Version 0.0.1, this is a test commit and test." />
     <MESSAGE value="Version 0.0.1, this is a test commit" />
     <MESSAGE value="Version 0.0.2, This new version adds support for finding basic random positions for each player on the attacking team." />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.0.2, This new version adds support for finding basic random positions for each player on the attacking team." />
+    <MESSAGE value="Version 0.0.3, This version adds extra features and a lot of debugging such as, &#10;- Adding Defense attack starting positions&#10;- Fixing problems with incorrect bounding boxes of start phase areas for the different sides&#10;- Fixed Variable misplacement" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 0.0.3, This version adds extra features and a lot of debugging such as, &#10;- Adding Defense attack starting positions&#10;- Fixing problems with incorrect bounding boxes of start phase areas for the different sides&#10;- Fixed Variable misplacement" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Valorant_Gameplay_Predictions$Main.coverage" NAME="Main Coverage Results" MODIFIED="1716272080625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Valorant_Gameplay_Predictions$Main.coverage" NAME="Main Coverage Results" MODIFIED="1716336621142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
