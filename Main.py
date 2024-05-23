@@ -346,70 +346,70 @@ with open("spawnPhaseExample.json", "w") as f:
 def attackRound1Player1():
     global attackPos1X
     global attackPos1Y
-    attackPos1X = randint(mixChangeX, maxChangeX)
+    attackPos1X = randint(minChangeX, maxChangeX)
     attackPos1Y = randint(minChangeY, maxChangeY)
     global attackPos1
     attackPos1 = str(attackPos1X) + "," + str(attackPos1Y)
 def attackRound1Player2():
     global attackPos2X
     global attackPos2Y
-    attackPos2X = randint(mixChangeX, maxChangeX)
+    attackPos2X = randint(minChangeX, maxChangeX)
     attackPos2Y = randint(minChangeY, maxChangeY)
     global attackPos2
     attackPos2 = str(attackPos2X) + "," + str(attackPos2Y)
 def attackRound1Player3():
     global attackPos3X
     global attackPos3Y
-    attackPos3X = randint(mixChangeX, maxChangeX)
+    attackPos3X = randint(minChangeX, maxChangeX)
     attackPos3Y = randint(minChangeY, maxChangeY)
     global attackPos3
     attackPos3 = str(attackPos3X) + "," + str(attackPos3Y)
 def attackRound1Player4():
     global attackPos4X
     global attackPos4Y
-    attackPos4X = randint(mixChangeX, maxChangeX)
+    attackPos4X = randint(minChangeX, maxChangeX)
     attackPos4Y = randint(minChangeY, maxChangeY)
     global attackPos4
     attackPos4 = str(attackPos4X) + "," + str(attackPos4Y)
 def attackRound1Player5():
     global attackPos5X
     global attackPos5Y
-    attackPos5X = randint(mixChangeX, maxChangeX)
+    attackPos5X = randint(minChangeX, maxChangeX)
     attackPos5Y = randint(minChangeY, maxChangeY)
     global attackPos5
     attackPos5 = str(attackPos5X) + "," + str(attackPos5Y)
 def defenseRound1Player1():
     global defensePos1X
     global defensePos1Y
-    attackPos1X = randint(mixChangeX, maxChangeX)
+    attackPos1X = randint(minChangeX, maxChangeX)
     attackPos1Y = randint(minChangeY, maxChangeY)
     global defensePos1
     defensePos1 = str(defensePos1X) + "," + str(defensePos1Y)
 def defenseRound1Player2():
     global defensePos2X
     global defensePos2Y
-    attackPos2X = randint(mixChangeX, maxChangeX)
+    attackPos2X = randint(minChangeX, maxChangeX)
     attackPos2Y = randint(minChangeY, maxChangeY)
     global defensePos2
     defensePos2 = str(defensePos2X) + "," + str(defensePos2Y)
 def defenseRound1Player3():
     global defensePos3X
     global defensePos3Y
-    attackPos3X = randint(mixChangeX, maxChangeX)
+    attackPos3X = randint(minChangeX, maxChangeX)
     attackPos3Y = randint(minChangeY, maxChangeY)
     global defensePos3
     defensePos3 = str(defensePos3X) + "," + str(defensePos3Y)
 def defenseRound1Player4():
     global defensePos4X
     global defensePos4Y
-    attackPos4X = randint(mixChangeX, maxChangeX)
+    attackPos4X = randint(minChangeX, maxChangeX)
     attackPos4Y = randint(minChangeY, maxChangeY)
     global defensePos4
     defensePos4 = str(defensePos4X) + "," + str(defensePos4Y)
 def defenseRound1Player5():
     global defensePos5X
     global defensePos5Y
-    attackPos5X = randint(mixChangeX, maxChangeX)
+    attackPos5X = randint(minChangeX, maxChangeX)
     attackPos5Y = randint(minChangeY, maxChangeY)
     global defensePos5
     defensePos5 = str(defensePos5X) + "," + str(defensePos5Y)
@@ -436,12 +436,12 @@ def playerAttackAttackSideCheck(playerNum):
             print("Attacker 1 v Defender 1")
             winChance = randint(1, 100)
             if winChance >= 50:
-                attackPlayer1Dead = true
-                defensePlayer1Dead = false
+                attackPlayer1Dead = True
+                defensePlayer1Dead = False
                 print("attack player 1 dead")
             if winChance <= 50:
-                attackPlayer1Dead = false
-                defensePlayer1Dead = true
+                attackPlayer1Dead = False
+                defensePlayer1Dead = True
                 print("defense player 1 dead")
 
         difference = defensePos1X - attackPos1X
@@ -450,12 +450,12 @@ def playerAttackAttackSideCheck(playerNum):
             print("Attacker 1 v Defender 1")
             winChance = randint(1, 100)
             if winChance >= 50:
-                attackPlayer1Dead = true
-                defensePlayer1Dead = false
+                attackPlayer1Dead = True
+                defensePlayer1Dead = False
                 print("attack player 1 dead")
             if winChance <= 50:
-                attackPlayer1Dead = false
-                defensePlayer1Dead = true
+                attackPlayer1Dead = False
+                defensePlayer1Dead = True
                 print("defense player 1 dead")
         difference = attackPos1X - defensePos2X
         if difference <= 10:
@@ -463,12 +463,12 @@ def playerAttackAttackSideCheck(playerNum):
             print("Attacker 1 v Defender 2")
             winChance = randint(1, 100)
             if winChance >= 50:
-                attackPlayer1Dead = true
-                defensePlayer2Dead = false
+                attackPlayer1Dead = True
+                defensePlayer2Dead = False
                 print("attack player 1 dead")
             if winChance <= 50:
-                attackPlayer1Dead = false
-                defensePlayer2Dead = true
+                attackPlayer1Dead = False
+                defensePlayer2Dead = True
                 print("defense player 2 dead")
         difference = defensePos2X - attackPos1X
         if difference <= 10:
@@ -476,12 +476,12 @@ def playerAttackAttackSideCheck(playerNum):
             print("Attacker 1 v Defender 2")
             winChance = randint(1, 100)
             if winChance >= 50:
-                attackPlayer1Dead = true
-                defensePlayer2Dead = false
+                attackPlayer1Dead = True
+                defensePlayer2Dead = False
                 print("attack player 1 dead")
             if winChance <= 50:
-                attackPlayer1Dead = false
-                defensePlayer2Dead = true
+                attackPlayer1Dead = False
+                defensePlayer2Dead = True
                 print("defense player 2 dead")
         difference = attackPos1X - defensePos3X
         if difference <= 10:
@@ -489,12 +489,12 @@ def playerAttackAttackSideCheck(playerNum):
             print("Attacker 1 v Defender 3")
             winChance = randint(1, 100)
             if winChance >= 50:
-                attackPlayer1Dead = true
-                defensePlayer3Dead = false
+                attackPlayer1Dead = True
+                defensePlayer3Dead = False
                 print("attack player 3 dead")
             if winChance <= 50:
-                attackPlayer1Dead = false
-                defensePlayer3Dead = true
+                attackPlayer1Dead = False
+                defensePlayer3Dead = True
                 print("defense player 3 dead")
         difference = defensePos3X - attackPos1X
         if difference <= 10:
@@ -502,12 +502,12 @@ def playerAttackAttackSideCheck(playerNum):
             print("Attacker 1 v Defender 3")
             winChance = randint(1, 100)
             if winChance >= 50:
-                attackPlayer1Dead = true
-                defensePlayer3Dead = false
+                attackPlayer1Dead = True
+                defensePlayer3Dead = False
                 print("attack player 1 dead")
             if winChance <= 50:
-                attackPlayer1Dead = false
-                defensePlayer3Dead = true
+                attackPlayer1Dead = False
+                defensePlayer3Dead = True
                 print("defense player 3 dead")
         difference = attackPos1X - defensePos4X
         if difference <= 10:
@@ -515,12 +515,12 @@ def playerAttackAttackSideCheck(playerNum):
             print("Attacker 1 v Defender 4")
             winChance = randint(1, 100)
             if winChance >= 50:
-                attackPlayer1Dead = true
-                defensePlayer4Dead = false
+                attackPlayer1Dead = True
+                defensePlayer4Dead = False
                 print("attack player 1 dead")
             if winChance <= 50:
-                attackPlayer1Dead = false
-                defensePlayer4Dead = true
+                attackPlayer1Dead = False
+                defensePlayer4Dead = True
                 print("defense player 4 dead")
         difference = defensePos4X - attackPos1X
         if difference <= 10:
@@ -528,12 +528,12 @@ def playerAttackAttackSideCheck(playerNum):
             print("Attacker 1 v Defender 4")
             winChance = randint(1, 100)
             if winChance >= 50:
-                attackPlayer1Dead = true
-                defensePlayer4Dead = false
+                attackPlayer1Dead = True
+                defensePlayer4Dead = False
                 print("attack player 1 dead")
             if winChance <= 50:
-                attackPlayer1Dead = false
-                defensePlayer4Dead = true
+                attackPlayer1Dead = False
+                defensePlayer4Dead = True
                 print("defense player 4 dead")
         difference = attackPos1X - defensePos5X
         if difference <= 10:
@@ -541,12 +541,12 @@ def playerAttackAttackSideCheck(playerNum):
             print("Attacker 1 v Defender 5")
             winChance = randint(1, 100)
             if winChance >= 50:
-                attackPlayer1Dead = true
-                defensePlayer5Dead = false
+                attackPlayer1Dead = True
+                defensePlayer5Dead = False
                 print("attack player 1 dead")
             if winChance <= 50:
-                attackPlayer1Dead = false
-                defensePlayer5Dead = true
+                attackPlayer1Dead = False
+                defensePlayer5Dead = True
                 print("defense player 5 dead")
         difference = defensePos5X - attackPos1X
         if difference <= 10:
@@ -554,12 +554,12 @@ def playerAttackAttackSideCheck(playerNum):
             print("Attacker 1 v Defender 5")
             winChance = randint(1, 100)
             if winChance >= 50:
-                attackPlayer1Dead = true
-                defensePlayer5Dead = false
+                attackPlayer1Dead = True
+                defensePlayer5Dead = False
                 print("attack player 1 dead")
             if winChance <= 50:
-                attackPlayer1Dead = false
-                defensePlayer5Dead = true
+                attackPlayer1Dead = False
+                defensePlayer5Dead = True
                 print("defense player 5 dead")
         difference = attackPos1Y - defensePos1Y
         if difference <= 10:
@@ -567,12 +567,12 @@ def playerAttackAttackSideCheck(playerNum):
             print("Attacker 1 v Defender 1")
             winChance = randint(1, 100)
             if winChance >= 50:
-                attackPlayer1Dead = true
-                defensePlayer1Dead = false
+                attackPlayer1Dead = True
+                defensePlayer1Dead = False
                 print("attack player 1 dead")
             if winChance <= 50:
-                attackPlayer1Dead = false
-                defensePlayer1Dead = true
+                attackPlayer1Dead = False
+                defensePlayer1Dead = True
                 print("defense player 1 dead")
 
         difference = defensePos1Y - attackPos1Y
@@ -581,12 +581,12 @@ def playerAttackAttackSideCheck(playerNum):
             print("Attacker 1 v Defender 1")
             winChance = randint(1, 100)
             if winChance >= 50:
-                attackPlayer1Dead = true
-                defensePlayer1Dead = false
+                attackPlayer1Dead = True
+                defensePlayer1Dead = False
                 print("attack player 1 dead")
             if winChance <= 50:
-                attackPlayer1Dead = false
-                defensePlayer1Dead = true
+                attackPlayer1Dead = False
+                defensePlayer1Dead = True
                 print("defense player 1 dead")
         difference = attackPos1Y - defensePos2Y
         if difference <= 10:
@@ -594,12 +594,12 @@ def playerAttackAttackSideCheck(playerNum):
             print("Attacker 1 v Defender 2")
             winChance = randint(1, 100)
             if winChance >= 50:
-                attackPlayer1Dead = true
-                defensePlayer2Dead = false
+                attackPlayer1Dead = True
+                defensePlayer2Dead = False
                 print("attack player 1 dead")
             if winChance <= 50:
-                attackPlayer1Dead = false
-                defensePlayer2Dead = true
+                attackPlayer1Dead = False
+                defensePlayer2Dead = True
                 print("defense player 2 dead")
         difference = defensePos2Y - attackPos1Y
         if difference <= 10:
@@ -607,12 +607,12 @@ def playerAttackAttackSideCheck(playerNum):
             print("Attacker 1 v Defender 2")
             winChance = randint(1, 100)
             if winChance >= 50:
-                attackPlayer1Dead = true
-                defensePlayer2Dead = false
+                attackPlayer1Dead = True
+                defensePlayer2Dead = False
                 print("attack player 1 dead")
             if winChance <= 50:
-                attackPlayer1Dead = false
-                defensePlayer2Dead = true
+                attackPlayer1Dead = False
+                defensePlayer2Dead = True
                 print("defense player 2 dead")
         difference = attackPos1Y - defensePos3Y
         if difference <= 10:
@@ -620,12 +620,12 @@ def playerAttackAttackSideCheck(playerNum):
             print("Attacker 1 v Defender 3")
             winChance = randint(1, 100)
             if winChance >= 50:
-                attackPlayer1Dead = true
-                defensePlayer3Dead = false
+                attackPlayer1Dead = True
+                defensePlayer3Dead = False
                 print("attack player 3 dead")
             if winChance <= 50:
-                attackPlayer1Dead = false
-                defensePlayer3Dead = true
+                attackPlayer1Dead = False
+                defensePlayer3Dead = True
                 print("defense player 3 dead")
         difference = defensePos3Y - attackPos1Y
         if difference <= 10:
@@ -633,12 +633,12 @@ def playerAttackAttackSideCheck(playerNum):
             print("Attacker 1 v Defender 3")
             winChance = randint(1, 100)
             if winChance >= 50:
-                attackPlayer1Dead = true
-                defensePlayer3Dead = false
+                attackPlayer1Dead = True
+                defensePlayer3Dead = False
                 print("attack player 1 dead")
             if winChance <= 50:
-                attackPlayer1Dead = false
-                defensePlayer3Dead = true
+                attackPlayer1Dead = False
+                defensePlayer3Dead = True
                 print("defense player 3 dead")
         difference = attackPos1Y - defensePos4Y
         if difference <= 10:
@@ -646,12 +646,12 @@ def playerAttackAttackSideCheck(playerNum):
             print("Attacker 1 v Defender 4")
             winChance = randint(1, 100)
             if winChance >= 50:
-                attackPlayer1Dead = true
-                defensePlayer4Dead = false
+                attackPlayer1Dead = True
+                defensePlayer4Dead = False
                 print("attack player 1 dead")
             if winChance <= 50:
-                attackPlayer1Dead = false
-                defensePlayer4Dead = true
+                attackPlayer1Dead = False
+                defensePlayer4Dead = True
                 print("defense player 4 dead")
         difference = defensePos4Y - attackPos1Y
         if difference <= 10:
@@ -659,12 +659,12 @@ def playerAttackAttackSideCheck(playerNum):
             print("Attacker 1 v Defender 4")
             winChance = randint(1, 100)
             if winChance >= 50:
-                attackPlayer1Dead = true
-                defensePlayer4Dead = false
+                attackPlayer1Dead = True
+                defensePlayer4Dead = False
                 print("attack player 1 dead")
             if winChance <= 50:
-                attackPlayer1Dead = false
-                defensePlayer4Dead = true
+                attackPlayer1Dead = False
+                defensePlayer4Dead = True
                 print("defense player 4 dead")
         difference = attackPos1Y - defensePos5Y
         if difference <= 10:
@@ -672,12 +672,12 @@ def playerAttackAttackSideCheck(playerNum):
             print("Attacker 1 v Defender 5")
             winChance = randint(1, 100)
             if winChance >= 50:
-                attackPlayer1Dead = true
-                defensePlayer5Dead = false
+                attackPlayer1Dead = True
+                defensePlayer5Dead = False
                 print("attack player 1 dead")
             if winChance <= 50:
-                attackPlayer1Dead = false
-                defensePlayer5Dead = true
+                attackPlayer1Dead = False
+                defensePlayer5Dead = True
                 print("defense player 5 dead")
         difference = defensePos5Y - attackPos1Y
         if difference <= 10:
@@ -685,12 +685,12 @@ def playerAttackAttackSideCheck(playerNum):
             print("Attacker 1 v Defender 5")
             winChance = randint(1, 100)
             if winChance >= 50:
-                attackPlayer1Dead = true
-                defensePlayer5Dead = false
+                attackPlayer1Dead = True
+                defensePlayer5Dead = False
                 print("attack player 1 dead")
             if winChance <= 50:
-                attackPlayer1Dead = false
-                defensePlayer5Dead = true
+                attackPlayer1Dead = False
+                defensePlayer5Dead = True
                 print("defense player 5 dead")
 
     if playerNum == "2":
@@ -700,12 +700,12 @@ def playerAttackAttackSideCheck(playerNum):
             print("Attacker 2 v Defender 1")
             winChance = randint(1, 100)
             if winChance >= 50:
-                attackPlayer2Dead = true
-                defensePlayer1Dead = false
+                attackPlayer2Dead = True
+                defensePlayer1Dead = False
                 print("attack player 2 dead")
             if winChance <= 50:
-                attackPlayer2Dead = false
-                defensePlayer1Dead = true
+                attackPlayer2Dead = False
+                defensePlayer1Dead = True
                 print("defense player 1 dead")
 
         difference = defensePos1X - attackPos2X
@@ -714,12 +714,12 @@ def playerAttackAttackSideCheck(playerNum):
             print("Attacker 2 v Defender 1")
             winChance = randint(1, 100)
             if winChance >= 50:
-                attackPlayer2Dead = true
-                defensePlayer1Dead = false
+                attackPlayer2Dead = True
+                defensePlayer1Dead = False
                 print("attack player 2 dead")
             if winChance <= 50:
-                attackPlayer2Dead = false
-                defensePlayer1Dead = true
+                attackPlayer2Dead = False
+                defensePlayer1Dead = True
                 print("defense player 1 dead")
         difference = attackPos2X - defensePos2X
         if difference <= 10:
@@ -727,12 +727,12 @@ def playerAttackAttackSideCheck(playerNum):
             print("Attacker 2 v Defender 2")
             winChance = randint(1, 100)
             if winChance >= 50:
-                attackPlayer2Dead = true
-                defensePlayer2Dead = false
+                attackPlayer2Dead = True
+                defensePlayer2Dead = False
                 print("attack player 1 dead")
             if winChance <= 50:
-                attackPlayer2Dead = false
-                defensePlayer2Dead = true
+                attackPlayer2Dead = False
+                defensePlayer2Dead = True
                 print("defense player 2 dead")
         difference = defensePos2X - attackPos2X
         if difference <= 10:
@@ -740,12 +740,12 @@ def playerAttackAttackSideCheck(playerNum):
             print("Attacker 2 v Defender 2")
             winChance = randint(1, 100)
             if winChance >= 50:
-                attackPlayer2Dead = true
-                defensePlayer2Dead = false
+                attackPlayer2Dead = True
+                defensePlayer2Dead = False
                 print("attack player 2 dead")
             if winChance <= 50:
-                attackPlayer2Dead = false
-                defensePlayer2Dead = true
+                attackPlayer2Dead = False
+                defensePlayer2Dead = True
                 print("defense player 2 dead")
         difference = attackPos2X - defensePos3X
         if difference <= 10:
@@ -753,12 +753,12 @@ def playerAttackAttackSideCheck(playerNum):
             print("Attacker 2 v Defender 3")
             winChance = randint(1, 100)
             if winChance >= 50:
-                attackPlayer2Dead = true
-                defensePlayer3Dead = false
+                attackPlayer2Dead = True
+                defensePlayer3Dead = False
                 print("attack player 2 dead")
             if winChance <= 50:
-                attackPlayer1Dead = false
-                defensePlayer3Dead = true
+                attackPlayer1Dead = False
+                defensePlayer3Dead = True
                 print("defense player 3 dead")
         difference = defensePos3X - attackPos2X
         if difference <= 10:
@@ -766,12 +766,12 @@ def playerAttackAttackSideCheck(playerNum):
             print("Attacker 2 v Defender 3")
             winChance = randint(1, 100)
             if winChance >= 50:
-                attackPlayer2Dead = true
-                defensePlayer3Dead = false
+                attackPlayer2Dead = True
+                defensePlayer3Dead = False
                 print("attack player 2 dead")
             if winChance <= 50:
-                attackPlayer2Dead = false
-                defensePlayer3Dead = true
+                attackPlayer2Dead = False
+                defensePlayer3Dead = True
                 print("defense player 3 dead")
         difference = attackPos2X - defensePos4X
         if difference <= 10:
@@ -779,12 +779,12 @@ def playerAttackAttackSideCheck(playerNum):
             print("Attacker 2 v Defender 4")
             winChance = randint(1, 100)
             if winChance >= 50:
-                attackPlayer2Dead = true
-                defensePlayer4Dead = false
+                attackPlayer2Dead = True
+                defensePlayer4Dead = False
                 print("attack player 2 dead")
             if winChance <= 50:
-                attackPlayer2Dead = false
-                defensePlayer4Dead = true
+                attackPlayer2Dead = False
+                defensePlayer4Dead = True
                 print("defense player 4 dead")
         difference = defensePos4X - attackPos2X
         if difference <= 10:
@@ -792,12 +792,12 @@ def playerAttackAttackSideCheck(playerNum):
             print("Attacker 2 v Defender 4")
             winChance = randint(1, 100)
             if winChance >= 50:
-                attackPlayer2Dead = true
-                defensePlayer4Dead = false
+                attackPlayer2Dead = True
+                defensePlayer4Dead = False
                 print("attack player 2 dead")
             if winChance <= 50:
-                attackPlayer2Dead = false
-                defensePlayer4Dead = true
+                attackPlayer2Dead = False
+                defensePlayer4Dead = True
                 print("defense player 4 dead")
         difference = attackPos2X - defensePos5X
         if difference <= 10:
@@ -805,12 +805,12 @@ def playerAttackAttackSideCheck(playerNum):
             print("Attacker 2 v Defender 5")
             winChance = randint(1, 100)
             if winChance >= 50:
-                attackPlayer2Dead = true
-                defensePlayer5Dead = false
+                attackPlayer2Dead = True
+                defensePlayer5Dead = False
                 print("attack player 2 dead")
             if winChance <= 50:
-                attackPlayer2Dead = false
-                defensePlayer5Dead = true
+                attackPlayer2Dead = False
+                defensePlayer5Dead = True
                 print("defense player 5 dead")
         difference = defensePos5X - attackPos2X
         if difference <= 10:
@@ -818,12 +818,12 @@ def playerAttackAttackSideCheck(playerNum):
             print("Attacker 2 v Defender 5")
             winChance = randint(1, 100)
             if winChance >= 50:
-                attackPlayer2Dead = true
-                defensePlayer5Dead = false
+                attackPlayer2Dead = True
+                defensePlayer5Dead = False
                 print("attack player 2 dead")
             if winChance <= 50:
-                attackPlayer2Dead = false
-                defensePlayer5Dead = true
+                attackPlayer2Dead = False
+                defensePlayer5Dead = True
                 print("defense player 5 dead")
         difference = attackPos2Y - defensePos1Y
         if difference <= 10:
@@ -3228,7 +3228,7 @@ def attackRound1BondaryCheck1():
             spawnAccepted = True
             print("Attack Move Accepted")
             print("Attack Player 1, X - " + str(attackPos1X) + ", Y - " + str(attackPos1Y))
-            playerAttackAttackSideCheck("1")
+    playerAttackAttackSideCheck("1")
 def attackRound1BondaryCheck2():
     spawnAccepted = False
     while spawnAccepted == False:
@@ -3240,7 +3240,7 @@ def attackRound1BondaryCheck2():
             spawnAccepted = True
             print("Attack Move Accepted")
             print("Attack Player 2, X - " + str(attackPos2X) + ", Y - " + str(attackPos2Y))
-            playerAttackAttackSideCheck("2")
+    playerAttackAttackSideCheck("2")
 def attackRound1BondaryCheck3():
     spawnAccepted = False
     while spawnAccepted == False:
@@ -3252,7 +3252,7 @@ def attackRound1BondaryCheck3():
             spawnAccepted = True
             print("Attack Move Accepted")
             print("Attack Player 3, X - " + str(attackPos3X) + ", Y - " + str(attackPos3Y))
-            playerAttackAttackSideCheck("3")
+    playerAttackAttackSideCheck("3")
 def attackRound1BondaryCheck4():
     spawnAccepted = False
     while spawnAccepted == False:
@@ -3264,7 +3264,7 @@ def attackRound1BondaryCheck4():
             spawnAccepted = True
             print("Attack Move Accepted")
             print("Attack Player 4, X - " + str(attackPos4X) + ", Y - " + str(attackPos4Y))
-            playerAttackAttackSideCheck("4")
+    playerAttackAttackSideCheck("4")
 def attackRound1BondaryCheck5():
     spawnAccepted = False
     while spawnAccepted == False:
@@ -3276,7 +3276,7 @@ def attackRound1BondaryCheck5():
             spawnAccepted = True
             print("Attack Move Accepted")
             print("Attack Player 5, X - " + str(attackPos5X) + ", Y - " + str(attackPos5Y))
-            playerAttackAttackSideCheck("5")
+    playerAttackAttackSideCheck("5")
 def defenseRoundBondaryCheck1():
     currentNumber = 1
     spawnAccepted = False
@@ -3289,7 +3289,7 @@ def defenseRoundBondaryCheck1():
             spawnAccepted = True
             print("Denfense Move Accepted")
             print("Defense Player 1, X - " + str(defensePos1X) + ", Y - " + str(defensePos1Y))
-            playerAttackDefenseSideCheck("1")
+    playerAttackDefenseSideCheck("1")
 def defenseRoundBondaryCheck2():
     currentNumber = 1
     spawnAccepted = False
@@ -3302,7 +3302,7 @@ def defenseRoundBondaryCheck2():
             spawnAccepted = True
             print("Denfense Move Accepted")
             print("Defense Player 2, X - " + str(defensePos2X) + ", Y - " + str(defensePos2Y))
-            playerAttackDefenseSideCheck("2")
+    playerAttackDefenseSideCheck("2")
 def defenseRoundBondaryCheck3():
     currentNumber = 1
     spawnAccepted = False
@@ -3315,7 +3315,7 @@ def defenseRoundBondaryCheck3():
             spawnAccepted = True
             print("Denfense Move Accepted")
             print("Defense Player 3, X - " + str(defensePos3X) + ", Y - " + str(defensePos3Y))
-            playerAttackDefenseSideCheck("3")
+    playerAttackDefenseSideCheck("3")
 def defenseRoundBondaryCheck4():
     currentNumber = 1
     spawnAccepted = False
@@ -3328,7 +3328,7 @@ def defenseRoundBondaryCheck4():
             spawnAccepted = True
             print("Denfense Move Accepted")
             print("Defense Player 4, X - " + str(defensePos4X) + ", Y - " + str(defensePos4Y))
-            playerAttackDefenseSideCheck("4")
+    playerAttackDefenseSideCheck("4")
 def defenseRoundBondaryCheck5():
     currentNumber = 1
     spawnAccepted = False
@@ -3341,7 +3341,7 @@ def defenseRoundBondaryCheck5():
             spawnAccepted = True
             print("Denfense Move Accepted")
             print("Defense Player 5, X - " + str(defensePos5X) + ", Y - " + str(defensePos5Y))
-            playerAttackDefenseSideCheck("5")
+    playerAttackDefenseSideCheck("5")
 
 print("Printing Attack Moves")
 attackRound1BondaryCheck1()
