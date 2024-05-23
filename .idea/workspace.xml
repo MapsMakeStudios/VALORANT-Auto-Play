@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b2434c5-d7ba-4e2c-9a83-ffd83aa9fdb2" name="Changes" comment="Version 0.0.6, This version adds extra features and a lot of debugging such as, &#10;- Fixed terminal spam when a spawn is declined&#10;- Added a json file for future replay support">
+    <list default="true" id="8b2434c5-d7ba-4e2c-9a83-ffd83aa9fdb2" name="Changes" comment="Version 0.0.7, This version adds extra features and a lot of debugging such as, &#10;- this version is adding support for players moving in each what is called a step in the round.&#10;- there is an attack check which is still being worked on and for the defense side it is not complete&#10;- there is a lot of debugging that will need to be done to complete this update with this feature taking up over 1600 lines of code&#10;- this update 0.0.6 will not be pushed to Git until further bugs have been fixed and the feature is a stable state.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,18 +22,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "MapsMakeStudios"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MapsMakeStudios&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/MapsMakeStudios/Valorant-Gameplay-Automoation.git",
-    "accountId": "5199298e-5076-4bd3-82be-2d2103e99ee5"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MapsMakeStudios/Valorant-Gameplay-Automoation.git&quot;,
+    &quot;accountId&quot;: &quot;5199298e-5076-4bd3-82be-2d2103e99ee5&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Main.py" root0="SKIP_INSPECTION" />
   </component>
@@ -52,21 +51,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Python.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -86,7 +85,8 @@
       <workItem from="1716253764753" duration="5546000" />
       <workItem from="1716264638931" duration="137000" />
       <workItem from="1716265006215" duration="2869000" />
-      <workItem from="1716271487239" duration="24123000" />
+      <workItem from="1716271487239" duration="24429000" />
+      <workItem from="1716369968258" duration="4000" />
     </task>
     <task id="LOCAL-00001" summary="Version 0.0.1, this is a test commit and test.">
       <option name="closed" value="true" />
@@ -176,7 +176,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716345988714</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Version 0.0.7, This version adds extra features and a lot of debugging such as, &#10;- this version is adding support for players moving in each what is called a step in the round.&#10;- there is an attack check which is still being worked on and for the defense side it is not complete&#10;- there is a lot of debugging that will need to be done to complete this update with this feature taking up over 1600 lines of code&#10;- this update 0.0.6 will not be pushed to Git until further bugs have been fixed and the feature is a stable state.">
+      <option name="closed" value="true" />
+      <created>1716369938736</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1716369938736</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,7 +211,8 @@
     <MESSAGE value="Version 0.0.5, This version adds extra features and a lot of debugging such as, &#10;- Adding Boundary Checking for the attack side as well as the defense side&#10;- Fixing future-proof problems with function names&#10;- Reducing wait times for the spawn information to be produced.&#10;- removing white space in code&#10;- Fixing spawn radius of both attack and defense side" />
     <MESSAGE value="Version 0.0.5, This version adds extra features and a lot of debugging such as, &#10;- Test Commit and Push" />
     <MESSAGE value="Version 0.0.6, This version adds extra features and a lot of debugging such as, &#10;- Fixed terminal spam when a spawn is declined&#10;- Added a json file for future replay support" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.0.6, This version adds extra features and a lot of debugging such as, &#10;- Fixed terminal spam when a spawn is declined&#10;- Added a json file for future replay support" />
+    <MESSAGE value="Version 0.0.7, This version adds extra features and a lot of debugging such as, &#10;- this version is adding support for players moving in each what is called a step in the round.&#10;- there is an attack check which is still being worked on and for the defense side it is not complete&#10;- there is a lot of debugging that will need to be done to complete this update with this feature taking up over 1600 lines of code&#10;- this update 0.0.6 will not be pushed to Git until further bugs have been fixed and the feature is a stable state." />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 0.0.7, This version adds extra features and a lot of debugging such as, &#10;- this version is adding support for players moving in each what is called a step in the round.&#10;- there is an attack check which is still being worked on and for the defense side it is not complete&#10;- there is a lot of debugging that will need to be done to complete this update with this feature taking up over 1600 lines of code&#10;- this update 0.0.6 will not be pushed to Git until further bugs have been fixed and the feature is a stable state." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Valorant_Gameplay_Predictions$Main.coverage" NAME="Main Coverage Results" MODIFIED="1716345650290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
