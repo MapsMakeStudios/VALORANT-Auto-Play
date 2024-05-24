@@ -1,0 +1,129 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"8b2434c5-d7ba-4e2c-9a83-ffd83aa9fdb2\" name=\"Changes\" comment=\"Version 0.0.7, This version adds extra features and a lot of debugging such as, &#10;- this version is adding support for players moving in each what is called a step in the round.&#10;- there is an attack check which is still being worked on and for the defense side it is not complete&#10;- there is a lot of debugging that will need to be done to complete this update with this feature taking up over 1600 lines of code&#10;- this update 0.0.6 will not be pushed to Git until further bugs have been fixed and the feature is a stable state.\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Python Script\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPEN&quot;,\n    &quot;assignee&quot;: &quot;MapsMakeStudios&quot;\n  }\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">{\n  &quot;selectedUrlAndAccountId&quot;: {\n    &quot;url&quot;: &quot;https://github.com/MapsMakeStudios/Valorant-Gameplay-Automoation.git&quot;,\n    &quot;accountId&quot;: &quot;5199298e-5076-4bd3-82be-2d2103e99ee5&quot;\n  }\n}</component>\n  <component name=\"HighlightingSettingsPerFile\">\n    <setting file=\"file://$PROJECT_DIR$/Main.py\" root0=\"SKIP_INSPECTION\" />\n  </component>\n  <component name=\"ProblemsViewState\">\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 2\n}</component>\n  <component name=\"ProjectId\" id=\"2gkuBfzxlQV4KmBuVS4dBY5AKcT\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,\n    &quot;Python.Main.executor&quot;: &quot;Run&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;git-widget-placeholder&quot;: &quot;main&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\n    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\n  }\n}</component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PY-241.15989.155\" />\n        <option value=\"bundled-python-sdk-babbdf50b680-7c6932dee5e4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.15989.155\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"8b2434c5-d7ba-4e2c-9a83-ffd83aa9fdb2\" name=\"Changes\" comment=\"\" />\n      <created>1716253762780</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1716253762780</updated>\n      <workItem from=\"1716253764753\" duration=\"5546000\" />\n      <workItem from=\"1716264638931\" duration=\"137000\" />\n      <workItem from=\"1716265006215\" duration=\"2869000\" />\n      <workItem from=\"1716271487239\" duration=\"24429000\" />\n      <workItem from=\"1716369968258\" duration=\"4000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Version 0.0.1, this is a test commit and test.\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1716258393469</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1716258393469</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"Version 0.0.1, this is a test commit\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1716258431306</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1716258431306</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Version 0.0.1, this is a test commit\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1716258443287</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1716258443287</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"Version 0.0.1, this is a test commit\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1716258449464</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1716258449464</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"Version 0.0.1, this is a test commit\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1716258715632</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1716258715632</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"Version 0.0.2, This new version adds support for finding basic random positions for each player on the attacking team.\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1716263334696</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1716263334697</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"Version 0.0.3, This version adds extra features and a lot of debugging such as, &#10;- Adding Defense attack starting positions&#10;- Fixing problems with incorrect bounding boxes of start phase areas for the different sides&#10;- Fixed Variable misplacement\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1716272555198</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1716272555198</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"Version 0.0.4, This version adds extra features and a lot of debugging such as, &#10;- Adding Boundary Checking for defense players when spawning&#10;- Adding a way to calculate all areas inside of non spawnable boundary boxes&#10;- Fixed Debugging text errors when printing positions of players on the defense team.\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1716336805536</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1716336805536</updated>\n    </task>\n    <task id=\"LOCAL-00009\" summary=\"Version 0.0.5, This version adds extra features and a lot of debugging such as, &#10;- Adding Boundary Checking for the attack side as well as the defense side&#10;- Fixing future-proof problems with function names&#10;- Reducing wait times for the spawn information to be produced.&#10;- removing white space in code&#10;- Fixing spawn radius of both attack and defense side\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1716342429897</created>\n      <option name=\"number\" value=\"00009\" />\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1716342429897</updated>\n    </task>\n    <task id=\"LOCAL-00010\" summary=\"Version 0.0.5, This version adds extra features and a lot of debugging such as, &#10;- Test Commit and Push\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1716342771017</created>\n      <option name=\"number\" value=\"00010\" />\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1716342771017</updated>\n    </task>\n    <task id=\"LOCAL-00011\" summary=\"Version 0.0.6, This version adds extra features and a lot of debugging such as, &#10;- Fixed terminal spam when a spawn is declined&#10;- Added a json file for future replay support\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1716345988714</created>\n      <option name=\"number\" value=\"00011\" />\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1716345988714</updated>\n    </task>\n    <task id=\"LOCAL-00012\" summary=\"Version 0.0.7, This version adds extra features and a lot of debugging such as, &#10;- this version is adding support for players moving in each what is called a step in the round.&#10;- there is an attack check which is still being worked on and for the defense side it is not complete&#10;- there is a lot of debugging that will need to be done to complete this update with this feature taking up over 1600 lines of code&#10;- this update 0.0.6 will not be pushed to Git until further bugs have been fixed and the feature is a stable state.\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1716369938736</created>\n      <option name=\"number\" value=\"00012\" />\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1716369938736</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"13\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\n    <MESSAGE value=\"Version 0.0.1, this is a test commit and test.\" />\n    <MESSAGE value=\"Version 0.0.1, this is a test commit\" />\n    <MESSAGE value=\"Version 0.0.2, This new version adds support for finding basic random positions for each player on the attacking team.\" />\n    <MESSAGE value=\"Version 0.0.3, This version adds extra features and a lot of debugging such as, &#10;- Adding Defense attack starting positions&#10;- Fixing problems with incorrect bounding boxes of start phase areas for the different sides&#10;- Fixed Variable misplacement\" />\n    <MESSAGE value=\"Version 0.0.4, This version adds extra features and a lot of debugging such as, &#10;- Adding Boundary Checking for defense players when spawning&#10;- Adding a way to calculate all areas inside of non spawnable boundary boxes&#10;- Fixed Debugging text errors when printing positions of players on the defense team.\" />\n    <MESSAGE value=\"Version 0.0.5, This version adds extra features and a lot of debugging such as, &#10;- Adding Boundary Checking for the attack side as well as the defense side&#10;- Fixing future-proof problems with function names&#10;- Reducing wait times for the spawn information to be produced.&#10;- removing white space in code&#10;- Fixing spawn radius of both attack and defense side\" />\n    <MESSAGE value=\"Version 0.0.5, This version adds extra features and a lot of debugging such as, &#10;- Test Commit and Push\" />\n    <MESSAGE value=\"Version 0.0.6, This version adds extra features and a lot of debugging such as, &#10;- Fixed terminal spam when a spawn is declined&#10;- Added a json file for future replay support\" />\n    <MESSAGE value=\"Version 0.0.7, This version adds extra features and a lot of debugging such as, &#10;- this version is adding support for players moving in each what is called a step in the round.&#10;- there is an attack check which is still being worked on and for the defense side it is not complete&#10;- there is a lot of debugging that will need to be done to complete this update with this feature taking up over 1600 lines of code&#10;- this update 0.0.6 will not be pushed to Git until further bugs have been fixed and the feature is a stable state.\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Version 0.0.7, This version adds extra features and a lot of debugging such as, &#10;- this version is adding support for players moving in each what is called a step in the round.&#10;- there is an attack check which is still being worked on and for the defense side it is not complete&#10;- there is a lot of debugging that will need to be done to complete this update with this feature taking up over 1600 lines of code&#10;- this update 0.0.6 will not be pushed to Git until further bugs have been fixed and the feature is a stable state.\" />\n  </component>\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\n    <SUITE FILE_PATH=\"coverage/Valorant_Gameplay_Predictions$Main.coverage\" NAME=\"Main Coverage Results\" MODIFIED=\"1716345650290\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 73d4203b38e9e54f63d721a3537aab43d3b7a954)
++++ b/.idea/workspace.xml	(date 1716552364720)
+@@ -4,8 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="8b2434c5-d7ba-4e2c-9a83-ffd83aa9fdb2" name="Changes" comment="Version 0.0.7, This version adds extra features and a lot of debugging such as, &#10;- this version is adding support for players moving in each what is called a step in the round.&#10;- there is an attack check which is still being worked on and for the defense side it is not complete&#10;- there is a lot of debugging that will need to be done to complete this update with this feature taking up over 1600 lines of code&#10;- this update 0.0.6 will not be pushed to Git until further bugs have been fixed and the feature is a stable state.">
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++    <list default="true" id="8b2434c5-d7ba-4e2c-9a83-ffd83aa9fdb2" name="Changes" comment="Version 0.0.8, This version adds extra features and a lot of debugging such as, &#10;- This is a attempt to fix a massive problem with the code">
++      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/spawnPhaseExample.json" beforeDir="false" afterPath="$PROJECT_DIR$/spawnPhaseExample.json" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -20,6 +21,11 @@
+     </option>
+   </component>
+   <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="main" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="GitHubPullRequestSearchHistory">{
+@@ -51,21 +57,21 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+-    &quot;Python.Main.executor&quot;: &quot;Run&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "ASKED_ADD_EXTERNAL_FILES": "true",
++    "Python.Main.executor": "Run",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "git-widget-placeholder": "Code-Fix-0.0.8",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "settings.editor.selected.configurable": "preferences.pluginManager",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
+@@ -87,6 +93,9 @@
+       <workItem from="1716265006215" duration="2869000" />
+       <workItem from="1716271487239" duration="24429000" />
+       <workItem from="1716369968258" duration="4000" />
++      <workItem from="1716419513709" duration="5011000" />
++      <workItem from="1716436852332" duration="1273000" />
++      <workItem from="1716508095301" duration="4125000" />
+     </task>
+     <task id="LOCAL-00001" summary="Version 0.0.1, this is a test commit and test.">
+       <option name="closed" value="true" />
+@@ -184,7 +193,31 @@
+       <option name="project" value="LOCAL" />
+       <updated>1716369938736</updated>
+     </task>
+-    <option name="localTasksCounter" value="13" />
++    <task id="LOCAL-00013" summary="Version 0.0.8, This version adds extra features and a lot of debugging such as, &#10;- Finished 0.0.7 build into a stable version which is renamed as 0.0.8">
++      <option name="closed" value="true" />
++      <created>1716422584949</created>
++      <option name="number" value="00013" />
++      <option name="presentableId" value="LOCAL-00013" />
++      <option name="project" value="LOCAL" />
++      <updated>1716422584949</updated>
++    </task>
++    <task id="LOCAL-00014" summary="Version 0.0.8, This version adds extra features and a lot of debugging such as, &#10;- Fixed small minor bugs in changed code this update will stay as version 0.0.8">
++      <option name="closed" value="true" />
++      <created>1716425876564</created>
++      <option name="number" value="00014" />
++      <option name="presentableId" value="LOCAL-00014" />
++      <option name="project" value="LOCAL" />
++      <updated>1716425876564</updated>
++    </task>
++    <task id="LOCAL-00015" summary="Version 0.0.8, This version adds extra features and a lot of debugging such as, &#10;- This is a attempt to fix a massive problem with the code">
++      <option name="closed" value="true" />
++      <created>1716508874660</created>
++      <option name="number" value="00015" />
++      <option name="presentableId" value="LOCAL-00015" />
++      <option name="project" value="LOCAL" />
++      <updated>1716508874660</updated>
++    </task>
++    <option name="localTasksCounter" value="16" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -212,9 +245,12 @@
+     <MESSAGE value="Version 0.0.5, This version adds extra features and a lot of debugging such as, &#10;- Test Commit and Push" />
+     <MESSAGE value="Version 0.0.6, This version adds extra features and a lot of debugging such as, &#10;- Fixed terminal spam when a spawn is declined&#10;- Added a json file for future replay support" />
+     <MESSAGE value="Version 0.0.7, This version adds extra features and a lot of debugging such as, &#10;- this version is adding support for players moving in each what is called a step in the round.&#10;- there is an attack check which is still being worked on and for the defense side it is not complete&#10;- there is a lot of debugging that will need to be done to complete this update with this feature taking up over 1600 lines of code&#10;- this update 0.0.6 will not be pushed to Git until further bugs have been fixed and the feature is a stable state." />
+-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.0.7, This version adds extra features and a lot of debugging such as, &#10;- this version is adding support for players moving in each what is called a step in the round.&#10;- there is an attack check which is still being worked on and for the defense side it is not complete&#10;- there is a lot of debugging that will need to be done to complete this update with this feature taking up over 1600 lines of code&#10;- this update 0.0.6 will not be pushed to Git until further bugs have been fixed and the feature is a stable state." />
++    <MESSAGE value="Version 0.0.8, This version adds extra features and a lot of debugging such as, &#10;- Finished 0.0.7 build into a stable version which is renamed as 0.0.8" />
++    <MESSAGE value="Version 0.0.8, This version adds extra features and a lot of debugging such as, &#10;- Fixed small minor bugs in changed code this update will stay as version 0.0.8" />
++    <MESSAGE value="Version 0.0.8, This version adds extra features and a lot of debugging such as, &#10;- This is a attempt to fix a massive problem with the code" />
++    <option name="LAST_COMMIT_MESSAGE" value="Version 0.0.8, This version adds extra features and a lot of debugging such as, &#10;- This is a attempt to fix a massive problem with the code" />
+   </component>
+   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+-    <SUITE FILE_PATH="coverage/Valorant_Gameplay_Predictions$Main.coverage" NAME="Main Coverage Results" MODIFIED="1716345650290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
++    <SUITE FILE_PATH="coverage/Valorant_Gameplay_Predictions$Main.coverage" NAME="Main Coverage Results" MODIFIED="1716518342726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+   </component>
+ </project>
+\ No newline at end of file
