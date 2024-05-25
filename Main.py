@@ -24,7 +24,28 @@ maxChangeX = 50
 maxChangeY = 50
 minChangeX = 5
 minChangeY = 5
-
+defensePlayer1Dead = False
+defensePlayer2Dead = False
+defensePlayer3Dead = False
+defensePlayer4Dead = False
+defensePlayer5Dead = False
+attackPlayer1Dead = False
+attackPlayer2Dead = False
+attackPlayer3Dead = False
+attackPlayer4Dead = False
+attackPlayer5Dead = False
+defenseTeamDead = False
+attackTeamDead = False
+defensePlayer1DeadTo = "Alive"
+defensePlayer2DeadTo = "Alive"
+defensePlayer3DeadTo = "Alive"
+defensePlayer4DeadTo = "Alive"
+defensePlayer5DeadTo = "Alive"
+attackPlayer1DeadTo = "Alive"
+attackPlayer2DeadTo = "Alive"
+attackPlayer3DeadTo = "Alive"
+attackPlayer4DeadTo = "Alive"
+attackPlayer5DeadTo = "Alive"
 #For Test Push
 
 for i in range(12):
@@ -401,9 +422,12 @@ def defenseRound1Player5():
     attackPos5Y = randint(minChangeY, maxChangeY)
     global defensePos5
     defensePos5 = str(defensePos5X) + "," + str(defensePos5Y)
+
+
 def playerAttackAttackSideCheck(playerNum):
     global isAttacked, attackPlayer1Dead, attackPlayer2Dead, attackPlayer3Dead, attackPlayer4Dead, attackPlayer5Dead
     global defensePlayer1Dead, defensePlayer2Dead, defensePlayer3Dead, defensePlayer4Dead, defensePlayer5Dead
+    global attackPlayer1Dead, attackPlayer2Dead, attackPlayer3Dead, attackPlayer4Dead, attackPlayer5Dead
 
     isAttacked = False
     winChance = 0
@@ -417,13 +441,10 @@ def playerAttackAttackSideCheck(playerNum):
         attackPos1Y, defensePos1Y, attackPos2Y, defensePos2Y, attackPos3Y, defensePos3Y,
         attackPos4Y, defensePos4Y, attackPos5Y, defensePos5Y
     ]
-
-    # Debugging prints
-    for i in range(len(differenceCalculationListX)):
-        print(differenceCalculationListX[i])
-    for i in range(len(differenceCalculationListY)):
-        print(differenceCalculationListY[i])
-
+    deathCheckListDefense = [defensePlayer1Dead, defensePlayer2Dead, defensePlayer3Dead, defensePlayer4Dead,
+                             defensePlayer5Dead]
+    deathCheckListAttack = [attackPlayer1Dead, attackPlayer2Dead, attackPlayer3Dead, attackPlayer4Dead,
+                            attackPlayer5Dead]
     currentAttackPlayerNumPrint = 0
 
     if playerNum == 1:
@@ -446,30 +467,39 @@ def playerAttackAttackSideCheck(playerNum):
     defensePlayerNumPrint = 1
 
     for i in range(0, 10, 2):
-        if currentAttackPlayerNum < len(differenceCalculationListX) and defensePlayerNum < len(differenceCalculationListX):
-            print(int(currentAttackPlayerNum))
-            print(int(defensePlayerNum))
-            difference = differenceCalculationListX[currentAttackPlayerNum] - differenceCalculationListX[defensePlayerNum]
+        if currentAttackPlayerNum < len(differenceCalculationListX) and defensePlayerNum < len(
+                differenceCalculationListX):
+            difference = differenceCalculationListX[currentAttackPlayerNum] - differenceCalculationListX[
+                defensePlayerNum]
 
-            if difference <= 10:
-                isAttacked = True
-                print(f"Attacker {currentAttackPlayerNumPrint} v Defender {defensePlayerNumPrint}")
-                winChance = randint(1, 100)
-                if winChance >= 50:
-                    globals()[f"attackPlayer{currentAttackPlayerNumPrint}Dead"] = True
-                    globals()[f"defensePlayer{defensePlayerNumPrint}Dead"] = False
-                    print(f"attack player {currentAttackPlayerNumPrint} dead")
-                else:
-                    globals()[f"attackPlayer{currentAttackPlayerNumPrint}Dead"] = False
-                    globals()[f"defensePlayer{defensePlayerNumPrint}Dead"] = True
-                    print(f"defense player {defensePlayerNumPrint} dead")
-        defensePlayerNum += 2
-        defensePlayerNumPrint += 1
+            if playerNum - 1 < len(deathCheckListAttack) and deathCheckListAttack[playerNum - 1]:
+                print("Player dead not checking for attacker's death")
+            if defensePlayerNumPrint - 1 < len(deathCheckListDefense) and deathCheckListDefense[
+                defensePlayerNumPrint - 1]:
+                print("Player dead not checking for defender's death")
+            else:
+                if difference <= 10:
+                    isAttacked = True
+                    print(f"Attacker {currentAttackPlayerNumPrint} v Defender {defensePlayerNumPrint}")
+                    winChance = randint(1, 100)
+                    if winChance >= 50:
+                        globals()[f"attackPlayer{currentAttackPlayerNumPrint}Dead"] = True
+                        globals()[f"defensePlayer{defensePlayerNumPrint}Dead"] = False
+                        print(f"Attack player {currentAttackPlayerNumPrint} dead")
+                        globals()[f"attackPlayer{currentAttackPlayerNumPrint}DeadTo"] = str("Defender " + str(defensePlayerNumPrint))
+                    else:
+                        globals()[f"attackPlayer{currentAttackPlayerNumPrint}Dead"] = False
+                        globals()[f"defensePlayer{defensePlayerNumPrint}Dead"] = True
+                        print(f"Defense player {defensePlayerNumPrint} dead")
+                        globals()[f"defensePlayer{defensePlayerNumPrint}DeadTo"] = str("Attacker " + str(currentAttackPlayerNumPrint))
+            defensePlayerNum += 2
+            defensePlayerNumPrint += 1
+
 
 def playerAttackDefenseSideCheck(playerNum):
     global isAttacked, attackPlayer1Dead, attackPlayer2Dead, attackPlayer3Dead, attackPlayer4Dead, attackPlayer5Dead
     global defensePlayer1Dead, defensePlayer2Dead, defensePlayer3Dead, defensePlayer4Dead, defensePlayer5Dead
-
+    global attackPlayer1Dead, attackPlayer2Dead, attackPlayer3Dead, attackPlayer4Dead, attackPlayer5Dead
     isAttacked = False
     winChance = 0
     difference = 0
@@ -482,13 +512,10 @@ def playerAttackDefenseSideCheck(playerNum):
         attackPos1Y, defensePos1Y, attackPos2Y, defensePos2Y, attackPos3Y, defensePos3Y,
         attackPos4Y, defensePos4Y, attackPos5Y, defensePos5Y
     ]
-
-    # Debugging prints
-    for i in range(len(differenceCalculationListX)):
-        print(differenceCalculationListX[i])
-    for i in range(len(differenceCalculationListY)):
-        print(differenceCalculationListY[i])
-
+    deathCheckListDefense = [defensePlayer1Dead, defensePlayer2Dead, defensePlayer3Dead, defensePlayer4Dead,
+                             defensePlayer5Dead]
+    deathCheckListAttack = [attackPlayer1Dead, attackPlayer2Dead, attackPlayer3Dead, attackPlayer4Dead,
+                            attackPlayer5Dead]
     currentDefensePlayerNum = playerNum
     currentDefensePlayerNumPrint = 0
 
@@ -512,162 +539,221 @@ def playerAttackDefenseSideCheck(playerNum):
     attackPlayerNumPrint = 1
 
     for i in range(0, 10, 2):
-        if currentDefensePlayerNum < len(differenceCalculationListX) and attackPlayerNum < len(differenceCalculationListX):
-            difference = differenceCalculationListX[currentDefensePlayerNum] - differenceCalculationListX[attackPlayerNum]
-            if difference <= 10:
-                isAttacked = True
-                print(f"Defender {currentDefensePlayerNumPrint} v Attacker {attackPlayerNumPrint}")
-                winChance = randint(1, 100)
-                if winChance >= 50:
-                    globals()[f"defensePlayer{currentDefensePlayerNumPrint}Dead"] = True
-                    globals()[f"attackPlayer{attackPlayerNumPrint}Dead"] = False
-                    print(f"defense player {currentDefensePlayerNumPrint} dead")
-                else:
-                    globals()[f"defensePlayer{currentDefensePlayerNumPrint}Dead"] = False
-                    globals()[f"attackPlayer{attackPlayerNumPrint}Dead"] = True
-                    print(f"attack player {attackPlayerNumPrint} dead")
-        attackPlayerNum += 2
-        attackPlayerNumPrint += 1
+        if currentDefensePlayerNum < len(differenceCalculationListX) and attackPlayerNum < len(
+                differenceCalculationListX):
+            difference = differenceCalculationListX[currentDefensePlayerNum] - differenceCalculationListX[
+                attackPlayerNum]
+
+            if playerNum - 1 < len(deathCheckListAttack) and deathCheckListAttack[playerNum - 1]:
+                print("Player dead not checking for attacker's death")
+            if currentDefensePlayerNumPrint - 1 < len(deathCheckListDefense) and deathCheckListDefense[
+                currentDefensePlayerNumPrint - 1]:
+                print("Player dead not checking for defender's death")
+            else:
+                if difference <= 10:
+                    isAttacked = True
+                    print(f"Defender {currentDefensePlayerNumPrint} v Attacker {attackPlayerNumPrint}")
+                    winChance = randint(1, 100)
+                    if winChance >= 50:
+                        globals()[f"defensePlayer{currentDefensePlayerNumPrint}Dead"] = True
+                        globals()[f"attackPlayer{attackPlayerNumPrint}Dead"] = False
+                        print(f"Defense player {currentDefensePlayerNumPrint} dead")
+                        globals()[f"attackPlayer{currentAttackPlayerNumPrint}DeadTo"] = str("Defender " + str(defensePlayerNumPrint))
+                    else:
+                        globals()[f"defensePlayer{currentDefensePlayerNumPrint}Dead"] = False
+                        globals()[f"attackPlayer{attackPlayerNumPrint}Dead"] = True
+                        print(f"Attack player {attackPlayerNumPrint} dead")
+                        globals()[f"defensePlayer{defensePlayerNumPrint}DeadTo"] = str("Attacker " + str(currentAttackPlayerNumPrint))
+            attackPlayerNum += 2
+            attackPlayerNumPrint += 1
 
 
 def attackRound1BondaryCheck1():
     spawnAccepted = False
-    while spawnAccepted == False:
-        attackRound1Player1()
-        if attackPos1 in listOfDenidedSpawns:
-            spawnAccepted = False
-            print("Attack Move Denided")
-        else:
-            spawnAccepted = True
-            print("Attack Move Accepted")
-            print("Attack Player 1, X - " + str(attackPos1X) + ", Y - " + str(attackPos1Y))
-    playerAttackAttackSideCheck(1)
+    if attackPlayer1Dead == True:
+        print("Player 1 Dead Not Moving")
+    else:
+        while spawnAccepted == False:
+            attackRound1Player1()
+            if attackPos1 in listOfDenidedSpawns:
+                spawnAccepted = False
+                print("Attack Move Denided")
+            else:
+                spawnAccepted = True
+                print("Attack Move Accepted")
+                print("Attack Player 1, X - " + str(attackPos1X) + ", Y - " + str(attackPos1Y))
+        playerAttackAttackSideCheck(1)
 def attackRound1BondaryCheck2():
     spawnAccepted = False
-    while spawnAccepted == False:
-        attackRound1Player2()
-        if attackPos1 in listOfDenidedSpawns:
-            spawnAccepted = False
-            print("Attack Move Denided")
-        else:
-            spawnAccepted = True
-            print("Attack Move Accepted")
-            print("Attack Player 2, X - " + str(attackPos2X) + ", Y - " + str(attackPos2Y))
-    playerAttackAttackSideCheck(2)
+    if attackPlayer2Dead == True:
+        print("Player 2 Dead Not Moving")
+    else:
+        while spawnAccepted == False:
+            attackRound1Player2()
+            if attackPos1 in listOfDenidedSpawns:
+                spawnAccepted = False
+                print("Attack Move Denided")
+            else:
+                spawnAccepted = True
+                print("Attack Move Accepted")
+                print("Attack Player 2, X - " + str(attackPos2X) + ", Y - " + str(attackPos2Y))
+        playerAttackAttackSideCheck(2)
 def attackRound1BondaryCheck3():
     spawnAccepted = False
-    while spawnAccepted == False:
-        attackRound1Player3()
-        if attackPos1 in listOfDenidedSpawns:
-            spawnAccepted = False
-            print("Attack Move Denided")
-        else:
-            spawnAccepted = True
-            print("Attack Move Accepted")
-            print("Attack Player 3, X - " + str(attackPos3X) + ", Y - " + str(attackPos3Y))
-    playerAttackAttackSideCheck(3)
+    if attackPlayer3Dead == True:
+        print("Player 3 Dead Not Moving")
+    else:
+        while spawnAccepted == False:
+            attackRound1Player3()
+            if attackPos1 in listOfDenidedSpawns:
+                spawnAccepted = False
+                print("Attack Move Denided")
+            else:
+                spawnAccepted = True
+                print("Attack Move Accepted")
+                print("Attack Player 3, X - " + str(attackPos3X) + ", Y - " + str(attackPos3Y))
+        playerAttackAttackSideCheck(3)
 def attackRound1BondaryCheck4():
     spawnAccepted = False
-    while spawnAccepted == False:
-        attackRound1Player4()
-        if attackPos1 in listOfDenidedSpawns:
-            spawnAccepted = False
-            print("Attack Move Denided")
-        else:
-            spawnAccepted = True
-            print("Attack Move Accepted")
-            print("Attack Player 4, X - " + str(attackPos4X) + ", Y - " + str(attackPos4Y))
-    playerAttackAttackSideCheck(4)
+    if attackPlayer4Dead == True:
+        print("Player 4 Dead Not Moving")
+    else:
+        while spawnAccepted == False:
+            attackRound1Player4()
+            if attackPos1 in listOfDenidedSpawns:
+                spawnAccepted = False
+                print("Attack Move Denided")
+            else:
+                spawnAccepted = True
+                print("Attack Move Accepted")
+                print("Attack Player 4, X - " + str(attackPos4X) + ", Y - " + str(attackPos4Y))
+        playerAttackAttackSideCheck(4)
 def attackRound1BondaryCheck5():
     spawnAccepted = False
-    while spawnAccepted == False:
-        attackRound1Player5()
-        if attackPos1 in listOfDenidedSpawns:
-            spawnAccepted = False
-            print("Attack Move Denided")
-        else:
-            spawnAccepted = True
-            print("Attack Move Accepted")
-            print("Attack Player 5, X - " + str(attackPos5X) + ", Y - " + str(attackPos5Y))
-    playerAttackAttackSideCheck(5)
+    if attackPlayer5Dead == True:
+        print("Player 5 Dead Not Moving")
+    else:
+        while spawnAccepted == False:
+            attackRound1Player5()
+            if attackPos1 in listOfDenidedSpawns:
+                spawnAccepted = False
+                print("Attack Move Denided")
+            else:
+                spawnAccepted = True
+                print("Attack Move Accepted")
+                print("Attack Player 5, X - " + str(attackPos5X) + ", Y - " + str(attackPos5Y))
+        playerAttackAttackSideCheck(5)
 def defenseRoundBondaryCheck1():
     currentNumber = 1
     spawnAccepted = False
-    while spawnAccepted == False:
-        defenseRound1Player1()
-        if defensePos1 in listOfDenidedSpawns:
-            spawnAccepted = False
-            print("Denfense Move Denided")
-        else:
-            spawnAccepted = True
-            print("Denfense Move Accepted")
-            print("Defense Player 1, X - " + str(defensePos1X) + ", Y - " + str(defensePos1Y))
-    playerAttackDefenseSideCheck(1)
+    if defensePlayer5Dead == True:
+        print("Player 5 Dead Not Moving")
+    else:
+        while spawnAccepted == False:
+            defenseRound1Player1()
+            if defensePos1 in listOfDenidedSpawns:
+                spawnAccepted = False
+                print("Denfense Move Denided")
+            else:
+                spawnAccepted = True
+                print("Denfense Move Accepted")
+                print("Defense Player 1, X - " + str(defensePos1X) + ", Y - " + str(defensePos1Y))
+        playerAttackDefenseSideCheck(1)
 def defenseRoundBondaryCheck2():
     currentNumber = 1
     spawnAccepted = False
-    while spawnAccepted == False:
-        defenseRound1Player2()
-        if defensePos1 in listOfDenidedSpawns:
-            spawnAccepted = False
-            print("Denfense Move Denided")
-        else:
-            spawnAccepted = True
-            print("Denfense Move Accepted")
-            print("Defense Player 2, X - " + str(defensePos2X) + ", Y - " + str(defensePos2Y))
-    playerAttackDefenseSideCheck(2)
+    if defensePlayer5Dead == True:
+        print("Player 5 Dead Not Moving")
+    else:
+        while spawnAccepted == False:
+            defenseRound1Player2()
+            if defensePos1 in listOfDenidedSpawns:
+                spawnAccepted = False
+                print("Denfense Move Denided")
+            else:
+                spawnAccepted = True
+                print("Denfense Move Accepted")
+                print("Defense Player 2, X - " + str(defensePos2X) + ", Y - " + str(defensePos2Y))
+        playerAttackDefenseSideCheck(2)
 def defenseRoundBondaryCheck3():
     currentNumber = 1
     spawnAccepted = False
-    while spawnAccepted == False:
-        defenseRound1Player3()
-        if defensePos1 in listOfDenidedSpawns:
-            spawnAccepted = False
-            print("Denfense Move Denided")
-        else:
-            spawnAccepted = True
-            print("Denfense Move Accepted")
-            print("Defense Player 3, X - " + str(defensePos3X) + ", Y - " + str(defensePos3Y))
-    playerAttackDefenseSideCheck(3)
+    if defensePlayer3Dead == True:
+        print("Player 3 Dead Not Moving")
+    else:
+        while spawnAccepted == False:
+            defenseRound1Player3()
+            if defensePos1 in listOfDenidedSpawns:
+                spawnAccepted = False
+                print("Denfense Move Denided")
+            else:
+                spawnAccepted = True
+                print("Denfense Move Accepted")
+                print("Defense Player 3, X - " + str(defensePos3X) + ", Y - " + str(defensePos3Y))
+        playerAttackDefenseSideCheck(3)
 def defenseRoundBondaryCheck4():
     currentNumber = 1
     spawnAccepted = False
-    while spawnAccepted == False:
-        defenseRound1Player4()
-        if defensePos1 in listOfDenidedSpawns:
-            spawnAccepted = False
-            print("Denfense Move Denided")
-        else:
-            spawnAccepted = True
-            print("Denfense Move Accepted")
-            print("Defense Player 4, X - " + str(defensePos4X) + ", Y - " + str(defensePos4Y))
-    playerAttackDefenseSideCheck(4)
+    if defensePlayer4Dead == True:
+        print("Player 4 Dead Not Moving")
+    else:
+        while spawnAccepted == False:
+            defenseRound1Player4()
+            if defensePos1 in listOfDenidedSpawns:
+                spawnAccepted = False
+                print("Denfense Move Denided")
+            else:
+                spawnAccepted = True
+                print("Denfense Move Accepted")
+                print("Defense Player 4, X - " + str(defensePos4X) + ", Y - " + str(defensePos4Y))
+        playerAttackDefenseSideCheck(4)
 def defenseRoundBondaryCheck5():
     currentNumber = 1
     spawnAccepted = False
-    while spawnAccepted == False:
-        defenseRound1Player5()
-        if defensePos1 in listOfDenidedSpawns:
-            spawnAccepted = False
-            print("Denfense Move Denided")
-        else:
-            spawnAccepted = True
-            print("Denfense Move Accepted")
-            print("Defense Player 5, X - " + str(defensePos5X) + ", Y - " + str(defensePos5Y))
-    playerAttackDefenseSideCheck(5)
+    if defensePlayer5Dead == True:
+        print("Player 5 Dead Not Moving")
+    else:
+        while spawnAccepted == False:
+            defenseRound1Player5()
+            if defensePos1 in listOfDenidedSpawns:
+                spawnAccepted = False
+                print("Denfense Move Denided")
+            else:
+                spawnAccepted = True
+                print("Denfense Move Accepted")
+                print("Defense Player 5, X - " + str(defensePos5X) + ", Y - " + str(defensePos5Y))
+        playerAttackDefenseSideCheck(5)
+def teamDefensesideCheck():
+
+    if defensePlayer1Dead and defensePlayer2Dead and defensePlayer3Dead and defensePlayer4Dead and defensePlayer5Dead == True:
+        print("Team Dead")
+        defenseTeamDead = True
+    else:
+        defenseTeamDead = False
+def teamAttacksideCheck():
+
+    if attackPlayer1Dead and attackPlayer2Dead and attackPlayer3Dead and attackPlayer4Dead and attackPlayer5Dead == True:
+        print("Team Dead")
+        attackTeamDead = True
+    else:
+        attackTeamDead = False
+
+
 
 print("Printing Attack Moves")
 attackRound1BondaryCheck1()
 attackRound1BondaryCheck2()
 attackRound1BondaryCheck3()
-defenseRoundBondaryCheck4()
-defenseRoundBondaryCheck5()
+attackRound1BondaryCheck4()
+attackRound1BondaryCheck5()
+teamAttacksideCheck()
 print("Printing Defense Moves")
 defenseRoundBondaryCheck1()
 defenseRoundBondaryCheck2()
 defenseRoundBondaryCheck3()
 defenseRoundBondaryCheck4()
 defenseRoundBondaryCheck5()
+teamDefensesideCheck()
 
 round1Layout = (
 
@@ -677,6 +763,7 @@ round1Layout = (
         "posX": attackPos1X,
         "posY": attackPos1Y,
         "Dead": attackPlayer1Dead,
+        "DeadTo": attackPlayer1DeadTo,
     },
     {
     "team": "Attack",
@@ -684,6 +771,7 @@ round1Layout = (
     "posX": attackPos2X,
     "posY": attackPos2Y,
     "Dead": attackPlayer2Dead,
+    "DeadTo": attackPlayer2DeadTo,
     },
     {
     "team": "Attack",
@@ -691,6 +779,7 @@ round1Layout = (
     "posX": attackPos3X,
     "posY": attackPos3Y,
     "Dead": attackPlayer3Dead,
+    "DeadTo": attackPlayer3DeadTo,
     },
     {
     "team": "Attack",
@@ -698,6 +787,7 @@ round1Layout = (
     "posX": attackPos4X,
     "posY": attackPos4Y,
     "Dead": attackPlayer4Dead,
+    "DeadTo": attackPlayer4DeadTo,
     },
     {
     "team": "Attack",
@@ -705,6 +795,7 @@ round1Layout = (
     "posX": attackPos5X,
     "posY": attackPos5Y,
     "Dead": attackPlayer5Dead,
+    "DeadTo": attackPlayer5DeadTo,
     },
     {
     "team": "Defense",
@@ -712,6 +803,7 @@ round1Layout = (
     "posX": defensePos1X,
     "posY": defensePos1Y,
     "Dead": defensePlayer1Dead,
+    "DeadTo": defensePlayer1DeadTo,
     },
     {
     "team": "Defense",
@@ -719,6 +811,7 @@ round1Layout = (
     "posX": defensePos2X,
     "posY": defensePos2Y,
     "Dead": defensePlayer2Dead,
+    "DeadTo": defensePlayer2DeadTo,
     },
     {
     "team": "Defense",
@@ -726,6 +819,7 @@ round1Layout = (
     "posX": defensePos3X,
     "posY": defensePos3Y,
     "Dead": defensePlayer3Dead,
+    "DeadTo": defensePlayer3DeadTo,
     },
     {
     "team": "Defense",
@@ -733,6 +827,7 @@ round1Layout = (
     "posX": defensePos4X,
     "posY": defensePos4Y,
     "Dead": defensePlayer4Dead,
+    "DeadTo": defensePlayer4DeadTo,
     },
     {
     "team": "Defense",
@@ -740,8 +835,18 @@ round1Layout = (
     "posX": defensePos5X,
     "posY": defensePos5Y,
     "Dead": defensePlayer5Dead,
+    "DeadTo": defensePlayer5DeadTo,
+    },
+    {
+    "team": "Defense",
+    "Dead": defenseTeamDead,
+    },
+    {
+    "team": "Attack",
+    "Dead": attackTeamDead,
     }
 )
 
 with open("round1Phase.json", "w") as f:
     json.dump(round1Layout, f, indent=4)
+print("json file created")
