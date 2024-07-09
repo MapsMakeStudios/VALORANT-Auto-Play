@@ -2,82 +2,82 @@
     {
         "team": "Attack",
         "playerNum": "1",
-        "posX": 50,
-        "posY": 44,
-        "Dead": false,
-        "DeadTo": "Defender 3"
+        "posX": 34,
+        "posY": 31,
+        "Dead": true,
+        "DeadTo": "Defender 4"
     },
     {
         "team": "Attack",
         "playerNum": "2",
-        "posX": 14,
-        "posY": 47,
+        "posX": 27,
+        "posY": 23,
         "Dead": true,
-        "DeadTo": "Defender 3"
+        "DeadTo": "Defender 1"
     },
     {
         "team": "Attack",
         "playerNum": "3",
-        "posX": 26,
-        "posY": 33,
+        "posX": 48,
+        "posY": 40,
+        "Dead": false,
+        "DeadTo": "Defender 5"
+    },
+    {
+        "team": "Attack",
+        "playerNum": "4",
+        "posX": 28,
+        "posY": 50,
         "Dead": true,
         "DeadTo": "Defender 3"
     },
     {
         "team": "Attack",
-        "playerNum": "4",
-        "posX": 37,
-        "posY": 38,
-        "Dead": false,
-        "DeadTo": "Alive"
-    },
-    {
-        "team": "Attack",
         "playerNum": "5",
-        "posX": 49,
-        "posY": 15,
-        "Dead": false,
+        "posX": 23,
+        "posY": 47,
+        "Dead": true,
         "DeadTo": "Alive"
     },
     {
         "team": "Defense",
         "playerNum": "1",
-        "posX": 11,
-        "posY": 35,
+        "posX": 10,
+        "posY": 13,
         "Dead": false,
-        "DeadTo": "Alive"
+        "DeadTo": "Attacker 5"
     },
     {
         "team": "Defense",
         "playerNum": "2",
-        "posX": 100,
-        "posY": 27,
-        "Dead": true,
+        "posX": 40,
+        "posY": 18,
+        "Dead": false,
         "DeadTo": "Attacker 3"
     },
     {
         "team": "Defense",
         "playerNum": "3",
-        "posX": 65,
-        "posY": 30,
-        "Dead": true,
-        "DeadTo": "Attacker 4"
+        "posX": 13,
+        "posY": 25,
+        "Dead": false,
+        "DeadTo": "Attacker 5"
     },
     {
         "team": "Defense",
         "playerNum": "4",
-        "posX": 71,
-        "posY": 39,
-        "Dead": true,
-        "DeadTo": "Attacker 1"
+        "posX": 37,
+        "posY": 16,
+        "Dead": false,
+        "DeadTo": "Attacker 4"
     },
     {
         "team": "Defense",
         "playerNum": "5",
-        "posX": 87,
-        "posY": 35,
-        "Dead": true,
-        "DeadTo": "Attacker 1"
+        "posX": 38,
+        "posY": 50,
+        "Dead": false,
+        "DeadTo": "Attacker 4"
     },
     {
         "team": "Defense",

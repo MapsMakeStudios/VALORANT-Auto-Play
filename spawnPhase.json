@@ -1,0 +1,62 @@
+[
+    {
+        "team": "Attack",
+        "playerNum": "1",
+        "posX": 57,
+        "posY": 83
+    },
+    {
+        "team": "Attack",
+        "playerNum": "2",
+        "posX": 49,
+        "posY": 82
+    },
+    {
+        "team": "Attack",
+        "playerNum": "3",
+        "posX": 77,
+        "posY": 75
+    },
+    {
+        "team": "Attack",
+        "playerNum": "4",
+        "posX": 58,
+        "posY": 74
+    },
+    {
+        "team": "Attack",
+        "playerNum": "5",
+        "posX": 16,
+        "posY": 77
+    },
+    {
+        "team": "Defense",
+        "playerNum": "1",
+        "posX": 10,
+        "posY": 35
+    },
+    {
+        "team": "Defense",
+        "playerNum": "2",
+        "posX": 67,
+        "posY": 25
+    },
+    {
+        "team": "Defense",
+        "playerNum": "3",
+        "posX": 3,
+        "posY": 35
+    },
+    {
+        "team": "Defense",
+        "playerNum": "4",
+        "posX": 63,
+        "posY": 24
+    },
+    {
+        "team": "Defense",
+        "playerNum": "5",
+        "posX": 31,
+        "posY": 37
+    }
+]

@@ -2,6 +2,7 @@ from random import randint
 from time import sleep
 import json
 import os
+import csv
 
 gridSizeX = 100
 gridSizeY = 100
@@ -46,6 +47,26 @@ attackPlayer2DeadTo = "Alive"
 attackPlayer3DeadTo = "Alive"
 attackPlayer4DeadTo = "Alive"
 attackPlayer5DeadTo = "Alive"
+attackStep1Pos1X = 0
+attackStep1Pos1Y = 0
+attackStep1Pos2X = 0
+attackStep1Pos2Y = 0
+attackStep1Pos3X = 0
+attackStep1Pos3Y = 0
+attackStep1Pos4X = 0
+attackStep1Pos4Y = 0
+attackStep1Pos5X = 0
+attackStep1Pos5Y = 0
+defenseStep1Pos1X = 0
+defenseStep1Pos1Y = 0
+defenseStep1Pos2X = 0
+defenseStep1Pos2Y = 0
+defenseStep1Pos3X = 0
+defenseStep1Pos3Y = 0
+defenseStep1Pos4X = 0
+defenseStep1Pos4Y = 0
+defenseStep1Pos5X = 0
+defenseStep1Pos5Y = 0
 #For Test Push
 
 for i in range(12):
@@ -55,9 +76,9 @@ for i in range(12):
         valueDenidedX += 1
     valueDenidedY += 1
 valueDenidedY = 22
-for i in range(12):
+for i in range(12): #X
     valueDenidedX = 52
-    for i in range(4):
+    for i in range(4): #Y
         listOfDenidedSpawns += [str(valueDenidedX) + "," + str(valueDenidedY)]
         valueDenidedX += 1
     valueDenidedY += 1
@@ -82,80 +103,131 @@ for i in range(7):
         listOfDenidedSpawns += [str(valueDenidedX) + "," + str(valueDenidedY)]
         valueDenidedX += 1
     valueDenidedY += 1
+valueDenidedY = 90
+for i in range(10):
+    valueDenidedX = 1
+    for i in range(100):
+        listOfDenidedSpawns += [str(valueDenidedX) + "," + str(valueDenidedY)]
+        valueDenidedX += 1
+    valueDenidedY += 1
+valueDenidedY = 85
+for i in range(4): #Y
+    valueDenidedX = 1
+    for i in range(46): #X
+        listOfDenidedSpawns += [str(valueDenidedX) + "," + str(valueDenidedY)]
+        valueDenidedX += 1
+    valueDenidedY += 1
+valueDenidedY = 79
+for i in range(10): #Y
+    valueDenidedX = 62
+    for i in range(40): #X
+        listOfDenidedSpawns += [str(valueDenidedX) + "," + str(valueDenidedY)]
+        valueDenidedX += 1
+    valueDenidedY += 1
+valueDenidedY = 31
+for i in range(13): #Y
+    valueDenidedX = 62
+    for i in range(8): #X
+        listOfDenidedSpawns += [str(valueDenidedX) + "," + str(valueDenidedY)]
+        valueDenidedX += 1
+    valueDenidedY += 1
+valueDenidedY = 1
+for i in range(100): #Y
+    valueDenidedX = 93
+    for i in range(7): #X
+        listOfDenidedSpawns += [str(valueDenidedX) + "," + str(valueDenidedY)]
+        valueDenidedX += 1
+    valueDenidedY += 1
+valueDenidedY = 37
+for i in range(8): #Y
+    valueDenidedX = 1
+    for i in range(11): #X
+        listOfDenidedSpawns += [str(valueDenidedX) + "," + str(valueDenidedY)]
+        valueDenidedX += 1
+    valueDenidedY += 1
+valueDenidedY = 37
+for i in range(7): #Y
+    valueDenidedX = 22
+    for i in range(8): #X
+        listOfDenidedSpawns += [str(valueDenidedX) + "," + str(valueDenidedY)]
+        valueDenidedX += 1
+    valueDenidedY += 1
+
+
 
 
 print(listOfDenidedSpawns)
 def attackSpawnPlayer1():
-    global attackPos1X
-    global attackPos1Y
-    attackPos1X = randint(attackSpawnRadiusMinX, attackSpawnRadiusMaxX)
-    attackPos1Y = randint(attackSpawnRadiusMinY, attackSpawnRadiusMaxY)
+    global attackSpawnPos1X
+    global attackSpawnPos1Y
+    attackSpawnPos1X = randint(attackSpawnRadiusMinX, attackSpawnRadiusMaxX)
+    attackSpawnPos1Y = randint(attackSpawnRadiusMinY, attackSpawnRadiusMaxY)
     global attackPos1
-    attackPos1 = str(attackPos1X) + "," + str(attackPos1Y)
+    attackPos1 = str(attackSpawnPos1X) + "," + str(attackSpawnPos1Y)
 def attackSpawnPlayer2():
-    global attackPos2X
-    global attackPos2Y
-    attackPos2X = randint(attackSpawnRadiusMinX, attackSpawnRadiusMaxX)
-    attackPos2Y = randint(attackSpawnRadiusMinY, attackSpawnRadiusMaxY)
+    global attackSpawnPos2X
+    global attackSpawnPos2Y
+    attackSpawnPos2X = randint(attackSpawnRadiusMinX, attackSpawnRadiusMaxX)
+    attackSpawnPos2Y = randint(attackSpawnRadiusMinY, attackSpawnRadiusMaxY)
     global attackPos2
-    attackPos2 = str(attackPos2X) + "," + str(attackPos2Y)
+    attackPos2 = str(attackSpawnPos2X) + "," + str(attackSpawnPos2Y)
 def attackSpawnPlayer3():
-    global attackPos3X
-    global attackPos3Y
-    attackPos3X = randint(attackSpawnRadiusMinX, attackSpawnRadiusMaxX)
-    attackPos3Y = randint(attackSpawnRadiusMinY, attackSpawnRadiusMaxY)
+    global attackSpawnPos3X
+    global attackSpawnPos3Y
+    attackSpawnPos3X = randint(attackSpawnRadiusMinX, attackSpawnRadiusMaxX)
+    attackSpawnPos3Y = randint(attackSpawnRadiusMinY, attackSpawnRadiusMaxY)
     global attackPos3
-    attackPos3 = str(attackPos3X) + "," + str(attackPos3Y)
+    attackPos3 = str(attackSpawnPos3X) + "," + str(attackSpawnPos3Y)
 def attackSpawnPlayer4():
-    global attackPos4X
-    global attackPos4Y
-    attackPos4X = randint(attackSpawnRadiusMinX, attackSpawnRadiusMaxX)
-    attackPos4Y = randint(attackSpawnRadiusMinY, attackSpawnRadiusMaxY)
+    global attackSpawnPos4X
+    global attackSpawnPos4Y
+    attackSpawnPos4X = randint(attackSpawnRadiusMinX, attackSpawnRadiusMaxX)
+    attackSpawnPos4Y = randint(attackSpawnRadiusMinY, attackSpawnRadiusMaxY)
     global attackPos4
-    attackPos4 = str(attackPos4X) + "," + str(attackPos4Y)
+    attackPos4 = str(attackSpawnPos4X) + "," + str(attackSpawnPos4Y)
 def attackSpawnPlayer5():
-    global attackPos5X
-    global attackPos5Y
-    attackPos5X = randint(attackSpawnRadiusMinX, attackSpawnRadiusMaxX)
-    attackPos5Y = randint(attackSpawnRadiusMinY, attackSpawnRadiusMaxY)
+    global attackSpawnPos5X
+    global attackSpawnPos5Y
+    attackSpawnPos5X = randint(attackSpawnRadiusMinX, attackSpawnRadiusMaxX)
+    attackSpawnPos5Y = randint(attackSpawnRadiusMinY, attackSpawnRadiusMaxY)
     global attackPos5
-    attackPos5 = str(attackPos5X) + "," + str(attackPos5Y)
+    attackPos5 = str(attackSpawnPos5X) + "," + str(attackSpawnPos5Y)
 def defenseSpawnPlayer1():
-    global defensePos1X
-    global defensePos1Y
-    defensePos1X = randint(defenseSpawnRadiusMinX, defenseSpawnRadiusMaxX)
-    defensePos1Y = randint(defenseSpawnRadiusMinY, defenseSpawnRadiusMaxY)
+    global defenseSpawnPos1X
+    global defenseSpawnPos1Y
+    defenseSpawnPos1X = randint(defenseSpawnRadiusMinX, defenseSpawnRadiusMaxX)
+    defenseSpawnPos1Y = randint(defenseSpawnRadiusMinY, defenseSpawnRadiusMaxY)
     global defensePos1
-    defensePos1 = str(defensePos1X) + "," + str(defensePos1Y)
+    defensePos1 = str(defenseSpawnPos1X) + "," + str(defenseSpawnPos1Y)
 
 def defenseSpawnPlayer2():
-    global defensePos2X
-    global defensePos2Y
-    defensePos2X = randint(defenseSpawnRadiusMinX, defenseSpawnRadiusMaxX)
-    defensePos2Y = randint(defenseSpawnRadiusMinY, defenseSpawnRadiusMaxY)
+    global defenseSpawnPos2X
+    global defenseSpawnPos2Y
+    defenseSpawnPos2X = randint(defenseSpawnRadiusMinX, defenseSpawnRadiusMaxX)
+    defenseSpawnPos2Y = randint(defenseSpawnRadiusMinY, defenseSpawnRadiusMaxY)
     global defensePos2
-    defensePos2 = str(defensePos2X) + "," + str(defensePos2Y)
+    defensePos2 = str(defenseSpawnPos2X) + "," + str(defenseSpawnPos2Y)
 def defenseSpawnPlayer3():
-    global defensePos3X
-    global defensePos3Y
-    defensePos3X = randint(defenseSpawnRadiusMinX, defenseSpawnRadiusMaxX)
-    defensePos3Y = randint(defenseSpawnRadiusMinY, defenseSpawnRadiusMaxY)
+    global defenseSpawnPos3X
+    global defenseSpawnPos3Y
+    defenseSpawnPos3X = randint(defenseSpawnRadiusMinX, defenseSpawnRadiusMaxX)
+    defenseSpawnPos3Y = randint(defenseSpawnRadiusMinY, defenseSpawnRadiusMaxY)
     global defensePos3
-    defensePos3 = str(defensePos3X) + "," + str(defensePos3Y)
+    defensePos3 = str(defenseSpawnPos3X) + "," + str(defenseSpawnPos3Y)
 def defenseSpawnPlayer4():
-    global defensePos4X
-    global defensePos4Y
-    defensePos4X = randint(defenseSpawnRadiusMinX, defenseSpawnRadiusMaxX)
-    defensePos4Y = randint(defenseSpawnRadiusMinY, defenseSpawnRadiusMaxY)
+    global defenseSpawnPos4X
+    global defenseSpawnPos4Y
+    defenseSpawnPos4X = randint(defenseSpawnRadiusMinX, defenseSpawnRadiusMaxX)
+    defenseSpawnPos4Y = randint(defenseSpawnRadiusMinY, defenseSpawnRadiusMaxY)
     global defensePos4
-    defensePos4 = str(defensePos4X) + "," + str(defensePos4Y)
+    defensePos4 = str(defenseSpawnPos4X) + "," + str(defenseSpawnPos4Y)
 def defenseSpawnPlayer5():
-    global defensePos5X
-    global defensePos5Y
-    defensePos5X = randint(defenseSpawnRadiusMinX, defenseSpawnRadiusMaxX)
-    defensePos5Y = randint(defenseSpawnRadiusMinY, defenseSpawnRadiusMaxY)
+    global defenseSpawnPos5X
+    global defenseSpawnPos5Y
+    defenseSpawnPos5X = randint(defenseSpawnRadiusMinX, defenseSpawnRadiusMaxX)
+    defenseSpawnPos5Y = randint(defenseSpawnRadiusMinY, defenseSpawnRadiusMaxY)
     global defensePos5
-    defensePos5 = str(defensePos5X) + "," + str(defensePos5Y)
+    defensePos5 = str(defenseSpawnPos5X) + "," + str(defenseSpawnPos5Y)
 
 def defenseSpawnBondaryCheck1():
     currentNumber = 1
@@ -168,7 +240,7 @@ def defenseSpawnBondaryCheck1():
         else:
             spawnAccepted = True
             print("Denfense Spawn Accepted")
-            print("Defense Player 1, X - " + str(defensePos1X) + ", Y - " + str(defensePos1Y))
+            print("Defense Player 1, X - " + str(defenseSpawnPos1X) + ", Y - " + str(defenseSpawnPos1Y))
 
 def defenseSpawnBondaryCheck2():
     spawnAccepted = False
@@ -180,7 +252,7 @@ def defenseSpawnBondaryCheck2():
         else:
             spawnAccepted = True
             print("Denfense Spawn Accepted")
-            print("Defense Player 2, X - " + str(defensePos2X) + ", Y - " + str(defensePos2Y))
+            print("Defense Player 2, X - " + str(defenseSpawnPos2X) + ", Y - " + str(defenseSpawnPos2Y))
 def defenseSpawnBondaryCheck3():
     spawnAccepted = False
     while spawnAccepted == False:
@@ -191,7 +263,7 @@ def defenseSpawnBondaryCheck3():
         else:
             spawnAccepted = True
             print("Denfense Spawn Accepted")
-            print("Defense Player 3, X - " + str(defensePos3X) + ", Y - " + str(defensePos3Y))
+            print("Defense Player 3, X - " + str(defenseSpawnPos3X) + ", Y - " + str(defenseSpawnPos3Y))
 def defenseSpawnBondaryCheck4():
     spawnAccepted = False
     while spawnAccepted == False:
@@ -202,7 +274,7 @@ def defenseSpawnBondaryCheck4():
         else:
             spawnAccepted = True
             print("Denfense Spawn Accepted")
-            print("Defense Player 4, X - " + str(defensePos4X) + ", Y - " + str(defensePos4Y))
+            print("Defense Player 4, X - " + str(defenseSpawnPos4X) + ", Y - " + str(defenseSpawnPos4Y))
 def defenseSpawnBondaryCheck5():
     spawnAccepted = False
     while spawnAccepted == False:
@@ -213,7 +285,7 @@ def defenseSpawnBondaryCheck5():
         else:
             spawnAccepted = True
             print("Denfense Spawn Accepted")
-            print("Defense Player 5, X - " + str(defensePos5X) + ", Y - " + str(defensePos5Y))
+            print("Defense Player 5, X - " + str(defenseSpawnPos5X) + ", Y - " + str(defenseSpawnPos5Y))
 def attackSpawnBondaryCheck1():
     spawnAccepted = False
     while spawnAccepted == False:
@@ -224,7 +296,7 @@ def attackSpawnBondaryCheck1():
         else:
             spawnAccepted = True
             print("Attack Spawn Accepted")
-            print("Attack Player 1, X - " + str(attackPos1X) + ", Y - " + str(attackPos1Y))
+            print("Attack Player 1, X - " + str(attackSpawnPos1X) + ", Y - " + str(attackSpawnPos1Y))
 def attackSpawnBondaryCheck2():
     spawnAccepted = False
     while spawnAccepted == False:
@@ -235,7 +307,7 @@ def attackSpawnBondaryCheck2():
         else:
             spawnAccepted = True
             print("Attack Spawn Accepted")
-            print("Attack Player 2, X - " + str(attackPos2X) + ", Y - " + str(attackPos2Y))
+            print("Attack Player 2, X - " + str(attackSpawnPos2X) + ", Y - " + str(attackSpawnPos2Y))
 def attackSpawnBondaryCheck3():
     spawnAccepted = False
     while spawnAccepted == False:
@@ -246,7 +318,7 @@ def attackSpawnBondaryCheck3():
         else:
             spawnAccepted = True
             print("Attack Spawn Accepted")
-            print("Attack Player 3, X - " + str(attackPos3X) + ", Y - " + str(attackPos3Y))
+            print("Attack Player 3, X - " + str(attackSpawnPos3X) + ", Y - " + str(attackSpawnPos3Y))
 def attackSpawnBondaryCheck4():
     spawnAccepted = False
     while spawnAccepted == False:
@@ -257,7 +329,7 @@ def attackSpawnBondaryCheck4():
         else:
             spawnAccepted = True
             print("Attack Spawn Accepted")
-            print("Attack Player 4, X - " + str(attackPos4X) + ", Y - " + str(attackPos4Y))
+            print("Attack Player 4, X - " + str(attackSpawnPos4X) + ", Y - " + str(attackSpawnPos4Y))
 def attackSpawnBondaryCheck5():
     spawnAccepted = False
     while spawnAccepted == False:
@@ -268,7 +340,8 @@ def attackSpawnBondaryCheck5():
         else:
             spawnAccepted = True
             print("Attack Spawn Accepted")
-            print("Attack Player 5, X - " + str(attackPos5X) + ", Y - " + str(attackPos5Y))
+            print("Attack Player 5, X - " + str(attackSpawnPos5X) + ", Y - " + str(attackSpawnPos5Y))
+
 
 print("Printing Attack Positions")
 attackSpawnBondaryCheck1()
@@ -283,148 +356,80 @@ defenseSpawnBondaryCheck3()
 defenseSpawnBondaryCheck4()
 defenseSpawnBondaryCheck5()
 
-spawnPhaseLayout = (
 
-    {
-        "team": "Attack",
-        "playerNum": "1",
-        "posX": attackPos1X,
-        "posY": defensePos1Y,
-    },
-    {
-        "team": "Attack",
-        "playerNum": "2",
-        "posX": attackPos2X,
-        "posY": defensePos2Y,
-    },
-    {
-        "team": "Attack",
-        "playerNum": "3",
-        "posX": attackPos3X,
-        "posY": defensePos3Y,
-    },
-    {
-        "team": "Attack",
-        "playerNum": "4",
-        "posX": attackPos4X,
-        "posY": defensePos4Y,
-    },
-    {
-        "team": "Attack",
-        "playerNum": "5",
-        "posX": attackPos5X,
-        "posY": defensePos5Y,
-    },
-    {
-        "team": "Defense",
-        "playerNum": "1",
-        "posX": defensePos1X,
-        "posY": defensePos1Y,
-    },
-    {
-        "team": "Defense",
-        "playerNum": "2",
-        "posX": defensePos2X,
-        "posY": defensePos2Y,
-    },
-    {
-        "team": "Defense",
-        "playerNum": "3",
-        "posX": defensePos3X,
-        "posY": defensePos3Y,
-    },
-    {
-        "team": "Defense",
-        "playerNum": "4",
-        "posX": defensePos4X,
-        "posY": defensePos1Y,
-    },
-    {
-        "team": "Defense",
-        "playerNum": "5",
-        "posX": defensePos5X,
-        "posY": defensePos5Y,
-    },
-
-)
-
-with open("spawnPhaseExample.json", "w") as f:
-    json.dump(spawnPhaseLayout, f, indent=4)
-
-
-def attackRound1Player1():
-    global attackPos1X
-    global attackPos1Y
-    attackPos1X = randint(minChangeX, maxChangeX)
-    attackPos1Y = randint(minChangeY, maxChangeY)
+def attackStep1Player1():
+    global attackStep1Pos1X
+    global attackStep1Pos1Y
+    attackStep1Pos1X = randint(minChangeX, maxChangeX)
+    attackStep1Pos1Y = randint(minChangeY, maxChangeY)
     global attackPos1
-    attackPos1 = str(attackPos1X) + "," + str(attackPos1Y)
-def attackRound1Player2():
-    global attackPos2X
-    global attackPos2Y
-    attackPos2X = randint(minChangeX, maxChangeX)
-    attackPos2Y = randint(minChangeY, maxChangeY)
+    attackPos1 = str(attackStep1Pos1X) + "," + str(attackStep1Pos1Y)
+def attackStep1Player2():
+    global attackStep1Pos2X
+    global attackStep1Pos2Y
+    attackStep1Pos2X = randint(minChangeX, maxChangeX)
+    attackStep1Pos2Y = randint(minChangeY, maxChangeY)
     global attackPos2
-    attackPos2 = str(attackPos2X) + "," + str(attackPos2Y)
-def attackRound1Player3():
-    global attackPos3X
-    global attackPos3Y
-    attackPos3X = randint(minChangeX, maxChangeX)
-    attackPos3Y = randint(minChangeY, maxChangeY)
+    attackPos2 = str(attackStep1Pos2X) + "," + str(attackStep1Pos2Y)
+def attackStep1Player3():
+    global attackStep1Pos3X
+    global attackStep1Pos3Y
+    attackStep1Pos3X = randint(minChangeX, maxChangeX)
+    attackStep1Pos3Y = randint(minChangeY, maxChangeY)
     global attackPos3
-    attackPos3 = str(attackPos3X) + "," + str(attackPos3Y)
-def attackRound1Player4():
-    global attackPos4X
-    global attackPos4Y
-    attackPos4X = randint(minChangeX, maxChangeX)
-    attackPos4Y = randint(minChangeY, maxChangeY)
+    attackPos3 = str(attackStep1Pos3X) + "," + str(attackStep1Pos3Y)
+def attackStep1Player4():
+    global attackStep1Pos4X
+    global attackStep1Pos4Y
+    attackStep1Pos4X = randint(minChangeX, maxChangeX)
+    attackStep1Pos4Y = randint(minChangeY, maxChangeY)
     global attackPos4
-    attackPos4 = str(attackPos4X) + "," + str(attackPos4Y)
-def attackRound1Player5():
-    global attackPos5X
-    global attackPos5Y
-    attackPos5X = randint(minChangeX, maxChangeX)
-    attackPos5Y = randint(minChangeY, maxChangeY)
+    attackPos4 = str(attackStep1Pos4X) + "," + str(attackStep1Pos4Y)
+def attackStep1Player5():
+    global attackStep1Pos5X
+    global attackStep1Pos5Y
+    attackStep1Pos5X = randint(minChangeX, maxChangeX)
+    attackStep1Pos5Y = randint(minChangeY, maxChangeY)
     global attackPos5
-    attackPos5 = str(attackPos5X) + "," + str(attackPos5Y)
-def defenseRound1Player1():
-    global defensePos1X
-    global defensePos1Y
-    attackPos1X = randint(minChangeX, maxChangeX)
-    attackPos1Y = randint(minChangeY, maxChangeY)
-    global defensePos1
-    defensePos1 = str(defensePos1X) + "," + str(defensePos1Y)
-def defenseRound1Player2():
-    global defensePos2X
-    global defensePos2Y
-    attackPos2X = randint(minChangeX, maxChangeX)
-    attackPos2Y = randint(minChangeY, maxChangeY)
-    global defensePos2
-    defensePos2 = str(defensePos2X) + "," + str(defensePos2Y)
-def defenseRound1Player3():
-    global defensePos3X
-    global defensePos3Y
-    attackPos3X = randint(minChangeX, maxChangeX)
-    attackPos3Y = randint(minChangeY, maxChangeY)
-    global defensePos3
-    defensePos3 = str(defensePos3X) + "," + str(defensePos3Y)
-def defenseRound1Player4():
-    global defensePos4X
-    global defensePos4Y
-    attackPos4X = randint(minChangeX, maxChangeX)
-    attackPos4Y = randint(minChangeY, maxChangeY)
-    global defensePos4
-    defensePos4 = str(defensePos4X) + "," + str(defensePos4Y)
-def defenseRound1Player5():
-    global defensePos5X
-    global defensePos5Y
-    attackPos5X = randint(minChangeX, maxChangeX)
-    attackPos5Y = randint(minChangeY, maxChangeY)
-    global defensePos5
-    defensePos5 = str(defensePos5X) + "," + str(defensePos5Y)
+    attackPos5 = str(attackStep1Pos5X) + "," + str(attackStep1Pos5Y)
+def defenseStep1Player1():
+    global defenseStep1Pos1X
+    global defenseStep1Pos1Y
+    defenseStep1Pos1X = randint(minChangeX, maxChangeX)
+    defenseStep1Pos1Y = randint(minChangeY, maxChangeY)
+    global defenseStep1Pos1
+    defenseStep1Pos1 = str(defenseStep1Pos1X) + "," + str(defenseStep1Pos1Y)
+def defenseStep1Player2():
+    global defenseStep1Pos2X
+    global defenseStep1Pos2Y
+    defenseStep1Pos2X = randint(minChangeX, maxChangeX)
+    defenseStep1Pos2Y = randint(minChangeY, maxChangeY)
+    global defenseStep1Pos2
+    defenseStep1Pos2 = str(defenseStep1Pos2X) + "," + str(defenseStep1Pos2Y)
+def defenseStep1Player3():
+    global defenseStep1Pos3X
+    global defenseStep1Pos3Y
+    defenseStep1Pos3X = randint(minChangeX, maxChangeX)
+    defenseStep1Pos3Y = randint(minChangeY, maxChangeY)
+    global defenseStep1Pos3
+    defenseStep1Pos3 = str(defenseStep1Pos3X) + "," + str(defenseStep1Pos3Y)
+def defenseStep1Player4():
+    global defenseStep1Pos4X
+    global defenseStep1Pos4Y
+    defenseStep1Pos4X = randint(minChangeX, maxChangeX)
+    defenseStep1Pos4Y = randint(minChangeY, maxChangeY)
+    global defenseStep1Pos4
+    defenseStep1Pos4 = str(defenseStep1Pos4X) + "," + str(defenseStep1Pos4Y)
+def defenseStep1Player5():
+    global defenseStep1Pos5X
+    global defenseStep1Pos5Y
+    defenseStep1Pos5X = randint(minChangeX, maxChangeX)
+    defenseStep1Pos5Y = randint(minChangeY, maxChangeY)
+    global defenseStep1Pos5
+    defenseStep1Pos5 = str(defenseStep1Pos5X) + "," + str(defenseStep1Pos5Y)
 
 
-def playerAttackAttackSideCheck(playerNum):
+def playerAttackAttackSideCheck1(playerNum):
     global isAttacked, attackPlayer1Dead, attackPlayer2Dead, attackPlayer3Dead, attackPlayer4Dead, attackPlayer5Dead
     global defensePlayer1Dead, defensePlayer2Dead, defensePlayer3Dead, defensePlayer4Dead, defensePlayer5Dead
     global attackPlayer1Dead, attackPlayer2Dead, attackPlayer3Dead, attackPlayer4Dead, attackPlayer5Dead
@@ -434,12 +439,12 @@ def playerAttackAttackSideCheck(playerNum):
     difference = 0
 
     differenceCalculationListX = [
-        attackPos1X, defensePos1X, attackPos2X, defensePos2X, attackPos3X, defensePos3X,
-        attackPos4X, defensePos4X, attackPos5X, defensePos5X
+        attackStep1Pos1X, defenseStep1Pos1X, attackStep1Pos2X, defenseStep1Pos2X, attackStep1Pos3X, defenseStep1Pos3X,
+        attackStep1Pos4X, defenseStep1Pos4X, attackStep1Pos5X, defenseStep1Pos5X
     ]
     differenceCalculationListY = [
-        attackPos1Y, defensePos1Y, attackPos2Y, defensePos2Y, attackPos3Y, defensePos3Y,
-        attackPos4Y, defensePos4Y, attackPos5Y, defensePos5Y
+        attackStep1Pos1Y, defenseStep1Pos1Y, attackStep1Pos2Y, defenseStep1Pos2Y, attackStep1Pos3Y, defenseStep1Pos3Y,
+        attackStep1Pos4Y, defenseStep1Pos4Y, attackStep1Pos5Y, defenseStep1Pos5Y
     ]
     deathCheckListDefense = [defensePlayer1Dead, defensePlayer2Dead, defensePlayer3Dead, defensePlayer4Dead,
                              defensePlayer5Dead]
@@ -496,7 +501,7 @@ def playerAttackAttackSideCheck(playerNum):
             defensePlayerNumPrint += 1
 
 
-def playerAttackDefenseSideCheck(playerNum):
+def playerAttackDefenseSideCheck1(playerNum):
     global isAttacked, attackPlayer1Dead, attackPlayer2Dead, attackPlayer3Dead, attackPlayer4Dead, attackPlayer5Dead
     global defensePlayer1Dead, defensePlayer2Dead, defensePlayer3Dead, defensePlayer4Dead, defensePlayer5Dead
     global attackPlayer1Dead, attackPlayer2Dead, attackPlayer3Dead, attackPlayer4Dead, attackPlayer5Dead
@@ -505,12 +510,12 @@ def playerAttackDefenseSideCheck(playerNum):
     difference = 0
 
     differenceCalculationListX = [
-        attackPos1X, defensePos1X, attackPos2X, defensePos2X, attackPos3X, defensePos3X,
-        attackPos4X, defensePos4X, attackPos5X, defensePos5X
+        attackStep1Pos1X, defenseStep1Pos1X, attackStep1Pos2X, defenseStep1Pos2X, attackStep1Pos3X, defenseStep1Pos3X,
+        attackStep1Pos4X, defenseStep1Pos4X, attackStep1Pos5X, defenseStep1Pos5X
     ]
     differenceCalculationListY = [
-        attackPos1Y, defensePos1Y, attackPos2Y, defensePos2Y, attackPos3Y, defensePos3Y,
-        attackPos4Y, defensePos4Y, attackPos5Y, defensePos5Y
+        attackStep1Pos1Y, defenseStep1Pos1Y, attackStep1Pos2Y, defenseStep1Pos2Y, attackStep1Pos3Y, defenseStep1Pos3Y,
+        attackStep1Pos4Y, defenseStep1Pos4Y, attackStep1Pos5Y, defenseStep1Pos5Y
     ]
     deathCheckListDefense = [defensePlayer1Dead, defensePlayer2Dead, defensePlayer3Dead, defensePlayer4Dead,
                              defensePlayer5Dead]
@@ -558,171 +563,171 @@ def playerAttackDefenseSideCheck(playerNum):
                         globals()[f"defensePlayer{currentDefensePlayerNumPrint}Dead"] = True
                         globals()[f"attackPlayer{attackPlayerNumPrint}Dead"] = False
                         print(f"Defense player {currentDefensePlayerNumPrint} dead")
-                        globals()[f"attackPlayer{currentAttackPlayerNumPrint}DeadTo"] = str("Defender " + str(defensePlayerNumPrint))
+                        globals()[f"attackPlayer{attackPlayerNumPrint}DeadTo"] = str("Defender " + str(currentDefensePlayerNumPrint))
                     else:
                         globals()[f"defensePlayer{currentDefensePlayerNumPrint}Dead"] = False
                         globals()[f"attackPlayer{attackPlayerNumPrint}Dead"] = True
                         print(f"Attack player {attackPlayerNumPrint} dead")
-                        globals()[f"defensePlayer{defensePlayerNumPrint}DeadTo"] = str("Attacker " + str(currentAttackPlayerNumPrint))
+                        globals()[f"defensePlayer{currentDefensePlayerNumPrint}DeadTo"] = str("Attacker " + str(attackPlayerNumPrint))
             attackPlayerNum += 2
             attackPlayerNumPrint += 1
 
 
-def attackRound1BondaryCheck1():
+def attackStep1BondaryCheck1():
     spawnAccepted = False
     if attackPlayer1Dead == True:
         print("Player 1 Dead Not Moving")
     else:
         while spawnAccepted == False:
-            attackRound1Player1()
+            attackStep1Player1()
             if attackPos1 in listOfDenidedSpawns:
                 spawnAccepted = False
                 print("Attack Move Denided")
             else:
                 spawnAccepted = True
                 print("Attack Move Accepted")
-                print("Attack Player 1, X - " + str(attackPos1X) + ", Y - " + str(attackPos1Y))
-        playerAttackAttackSideCheck(1)
-def attackRound1BondaryCheck2():
+                print("Attack Player 1, X - " + str(attackStep1Pos1X) + ", Y - " + str(attackStep1Pos1Y))
+        playerAttackAttackSideCheck1(1)
+def attackStep1BondaryCheck2():
     spawnAccepted = False
     if attackPlayer2Dead == True:
         print("Player 2 Dead Not Moving")
     else:
         while spawnAccepted == False:
-            attackRound1Player2()
+            attackStep1Player2()
             if attackPos1 in listOfDenidedSpawns:
                 spawnAccepted = False
                 print("Attack Move Denided")
             else:
                 spawnAccepted = True
                 print("Attack Move Accepted")
-                print("Attack Player 2, X - " + str(attackPos2X) + ", Y - " + str(attackPos2Y))
-        playerAttackAttackSideCheck(2)
-def attackRound1BondaryCheck3():
+                print("Attack Player 2, X - " + str(attackStep1Pos2X) + ", Y - " + str(attackStep1Pos2Y))
+        playerAttackAttackSideCheck1(2)
+def attackStep1BondaryCheck3():
     spawnAccepted = False
     if attackPlayer3Dead == True:
         print("Player 3 Dead Not Moving")
     else:
         while spawnAccepted == False:
-            attackRound1Player3()
+            attackStep1Player3()
             if attackPos1 in listOfDenidedSpawns:
                 spawnAccepted = False
                 print("Attack Move Denided")
             else:
                 spawnAccepted = True
                 print("Attack Move Accepted")
-                print("Attack Player 3, X - " + str(attackPos3X) + ", Y - " + str(attackPos3Y))
-        playerAttackAttackSideCheck(3)
-def attackRound1BondaryCheck4():
+                print("Attack Player 3, X - " + str(attackStep1Pos3X) + ", Y - " + str(attackStep1Pos3Y))
+        playerAttackAttackSideCheck1(3)
+def attackStep1BondaryCheck4():
     spawnAccepted = False
     if attackPlayer4Dead == True:
         print("Player 4 Dead Not Moving")
     else:
         while spawnAccepted == False:
-            attackRound1Player4()
+            attackStep1Player4()
             if attackPos1 in listOfDenidedSpawns:
                 spawnAccepted = False
                 print("Attack Move Denided")
             else:
                 spawnAccepted = True
                 print("Attack Move Accepted")
-                print("Attack Player 4, X - " + str(attackPos4X) + ", Y - " + str(attackPos4Y))
-        playerAttackAttackSideCheck(4)
-def attackRound1BondaryCheck5():
+                print("Attack Player 4, X - " + str(attackStep1Pos4X) + ", Y - " + str(attackStep1Pos4Y))
+        playerAttackAttackSideCheck1(4)
+def attackStep1BondaryCheck5():
     spawnAccepted = False
     if attackPlayer5Dead == True:
         print("Player 5 Dead Not Moving")
     else:
         while spawnAccepted == False:
-            attackRound1Player5()
+            attackStep1Player5()
             if attackPos1 in listOfDenidedSpawns:
                 spawnAccepted = False
                 print("Attack Move Denided")
             else:
                 spawnAccepted = True
                 print("Attack Move Accepted")
-                print("Attack Player 5, X - " + str(attackPos5X) + ", Y - " + str(attackPos5Y))
-        playerAttackAttackSideCheck(5)
-def defenseRoundBondaryCheck1():
+                print("Attack Player 5, X - " + str(attackStep1Pos5X) + ", Y - " + str(attackStep1Pos5Y))
+        playerAttackAttackSideCheck1(5)
+def defenseStep1BondaryCheck1():
     currentNumber = 1
     spawnAccepted = False
     if defensePlayer5Dead == True:
         print("Player 5 Dead Not Moving")
     else:
         while spawnAccepted == False:
-            defenseRound1Player1()
+            defenseStep1Player1()
             if defensePos1 in listOfDenidedSpawns:
                 spawnAccepted = False
                 print("Denfense Move Denided")
             else:
                 spawnAccepted = True
                 print("Denfense Move Accepted")
-                print("Defense Player 1, X - " + str(defensePos1X) + ", Y - " + str(defensePos1Y))
-        playerAttackDefenseSideCheck(1)
-def defenseRoundBondaryCheck2():
+                print("Defense Player 1, X - " + str(defenseStep1Pos1X) + ", Y - " + str(defenseStep1Pos1Y))
+        playerAttackDefenseSideCheck1(1)
+def defenseStep1BondaryCheck2():
     currentNumber = 1
     spawnAccepted = False
     if defensePlayer5Dead == True:
         print("Player 5 Dead Not Moving")
     else:
         while spawnAccepted == False:
-            defenseRound1Player2()
+            defenseStep1Player2()
             if defensePos1 in listOfDenidedSpawns:
                 spawnAccepted = False
                 print("Denfense Move Denided")
             else:
                 spawnAccepted = True
                 print("Denfense Move Accepted")
-                print("Defense Player 2, X - " + str(defensePos2X) + ", Y - " + str(defensePos2Y))
-        playerAttackDefenseSideCheck(2)
-def defenseRoundBondaryCheck3():
+                print("Defense Player 2, X - " + str(defenseStep1Pos2X) + ", Y - " + str(defenseStep1Pos2Y))
+        playerAttackDefenseSideCheck1(2)
+def defenseStep1BondaryCheck3():
     currentNumber = 1
     spawnAccepted = False
     if defensePlayer3Dead == True:
         print("Player 3 Dead Not Moving")
     else:
         while spawnAccepted == False:
-            defenseRound1Player3()
+            defenseStep1Player3()
             if defensePos1 in listOfDenidedSpawns:
                 spawnAccepted = False
                 print("Denfense Move Denided")
             else:
                 spawnAccepted = True
                 print("Denfense Move Accepted")
-                print("Defense Player 3, X - " + str(defensePos3X) + ", Y - " + str(defensePos3Y))
-        playerAttackDefenseSideCheck(3)
-def defenseRoundBondaryCheck4():
+                print("Defense Player 3, X - " + str(defenseStep1Pos3X) + ", Y - " + str(defenseStep1Pos3Y))
+        playerAttackDefenseSideCheck1(3)
+def defenseStep1BondaryCheck4():
     currentNumber = 1
     spawnAccepted = False
     if defensePlayer4Dead == True:
         print("Player 4 Dead Not Moving")
     else:
         while spawnAccepted == False:
-            defenseRound1Player4()
+            defenseStep1Player4()
             if defensePos1 in listOfDenidedSpawns:
                 spawnAccepted = False
                 print("Denfense Move Denided")
             else:
                 spawnAccepted = True
                 print("Denfense Move Accepted")
-                print("Defense Player 4, X - " + str(defensePos4X) + ", Y - " + str(defensePos4Y))
-        playerAttackDefenseSideCheck(4)
-def defenseRoundBondaryCheck5():
+                print("Defense Player 4, X - " + str(defenseStep1Pos4X) + ", Y - " + str(defenseStep1Pos4Y))
+        playerAttackDefenseSideCheck1(4)
+def defenseStep1BondaryCheck5():
     currentNumber = 1
     spawnAccepted = False
     if defensePlayer5Dead == True:
         print("Player 5 Dead Not Moving")
     else:
         while spawnAccepted == False:
-            defenseRound1Player5()
+            defenseStep1Player5()
             if defensePos1 in listOfDenidedSpawns:
                 spawnAccepted = False
                 print("Denfense Move Denided")
             else:
                 spawnAccepted = True
                 print("Denfense Move Accepted")
-                print("Defense Player 5, X - " + str(defensePos5X) + ", Y - " + str(defensePos5Y))
-        playerAttackDefenseSideCheck(5)
+                print("Defense Player 5, X - " + str(defenseStep1Pos5X) + ", Y - " + str(defenseStep1Pos5Y))
+        playerAttackDefenseSideCheck1(5)
 def teamDefensesideCheck():
 
     if defensePlayer1Dead and defensePlayer2Dead and defensePlayer3Dead and defensePlayer4Dead and defensePlayer5Dead == True:
@@ -741,99 +746,168 @@ def teamAttacksideCheck():
 
 
 print("Printing Attack Moves")
-attackRound1BondaryCheck1()
-attackRound1BondaryCheck2()
-attackRound1BondaryCheck3()
-attackRound1BondaryCheck4()
-attackRound1BondaryCheck5()
+attackStep1BondaryCheck1()
+attackStep1BondaryCheck2()
+attackStep1BondaryCheck3()
+attackStep1BondaryCheck4()
+attackStep1BondaryCheck5()
 teamAttacksideCheck()
 print("Printing Defense Moves")
-defenseRoundBondaryCheck1()
-defenseRoundBondaryCheck2()
-defenseRoundBondaryCheck3()
-defenseRoundBondaryCheck4()
-defenseRoundBondaryCheck5()
+defenseStep1BondaryCheck1()
+defenseStep1BondaryCheck2()
+defenseStep1BondaryCheck3()
+defenseStep1BondaryCheck4()
+defenseStep1BondaryCheck5()
 teamDefensesideCheck()
+
+spawnPhaseLayout = (
+
+    {
+        "team": "Attack",
+        "playerNum": "1",
+        "posX": attackSpawnPos1X,
+        "posY": attackSpawnPos1Y,
+    },
+    {
+        "team": "Attack",
+        "playerNum": "2",
+        "posX": attackSpawnPos2X,
+        "posY": attackSpawnPos2Y,
+    },
+    {
+        "team": "Attack",
+        "playerNum": "3",
+        "posX": attackSpawnPos3X,
+        "posY": attackSpawnPos3Y,
+    },
+    {
+        "team": "Attack",
+        "playerNum": "4",
+        "posX": attackSpawnPos4X,
+        "posY": attackSpawnPos4Y,
+    },
+    {
+        "team": "Attack",
+        "playerNum": "5",
+        "posX": attackSpawnPos5X,
+        "posY": attackSpawnPos5Y,
+    },
+    {
+        "team": "Defense",
+        "playerNum": "1",
+        "posX": defenseSpawnPos1X,
+        "posY": defenseSpawnPos1Y,
+    },
+    {
+        "team": "Defense",
+        "playerNum": "2",
+        "posX": defenseSpawnPos2X,
+        "posY": defenseSpawnPos2Y,
+    },
+    {
+        "team": "Defense",
+        "playerNum": "3",
+        "posX": defenseSpawnPos3X,
+        "posY": defenseSpawnPos3Y,
+    },
+    {
+        "team": "Defense",
+        "playerNum": "4",
+        "posX": defenseSpawnPos4X,
+        "posY": defenseSpawnPos4Y,
+    },
+    {
+        "team": "Defense",
+        "playerNum": "5",
+        "posX": defenseSpawnPos5X,
+        "posY": defenseSpawnPos5Y,
+    },
+
+)
+
+with open("spawnPhase.json", "w") as f:
+    json.dump(spawnPhaseLayout, f, indent=4)
+
 
 round1Layout = (
 
     {
         "team": "Attack",
         "playerNum": "1",
-        "posX": attackPos1X,
-        "posY": attackPos1Y,
+        "posX": attackStep1Pos1X,
+        "posY": attackStep1Pos1Y,
         "Dead": attackPlayer1Dead,
         "DeadTo": attackPlayer1DeadTo,
     },
     {
     "team": "Attack",
     "playerNum": "2",
-    "posX": attackPos2X,
-    "posY": attackPos2Y,
+    "posX": attackStep1Pos2X,
+    "posY": attackStep1Pos2Y,
     "Dead": attackPlayer2Dead,
     "DeadTo": attackPlayer2DeadTo,
     },
     {
     "team": "Attack",
     "playerNum": "3",
-    "posX": attackPos3X,
-    "posY": attackPos3Y,
+    "posX": attackStep1Pos3X,
+    "posY": attackStep1Pos3Y,
     "Dead": attackPlayer3Dead,
     "DeadTo": attackPlayer3DeadTo,
     },
     {
     "team": "Attack",
     "playerNum": "4",
-    "posX": attackPos4X,
-    "posY": attackPos4Y,
+    "posX": attackStep1Pos4X,
+    "posY": attackStep1Pos4Y,
     "Dead": attackPlayer4Dead,
     "DeadTo": attackPlayer4DeadTo,
     },
     {
     "team": "Attack",
     "playerNum": "5",
-    "posX": attackPos5X,
-    "posY": attackPos5Y,
+    "posX": attackStep1Pos5X,
+    "posY": attackStep1Pos5Y,
     "Dead": attackPlayer5Dead,
     "DeadTo": attackPlayer5DeadTo,
     },
     {
     "team": "Defense",
     "playerNum": "1",
-    "posX": defensePos1X,
-    "posY": defensePos1Y,
+    "posX": defenseStep1Pos1X,
+    "posY": defenseStep1Pos1Y,
     "Dead": defensePlayer1Dead,
     "DeadTo": defensePlayer1DeadTo,
     },
     {
     "team": "Defense",
     "playerNum": "2",
-    "posX": defensePos2X,
-    "posY": defensePos2Y,
+    "posX": defenseStep1Pos2X,
+    "posY": defenseStep1Pos2Y,
     "Dead": defensePlayer2Dead,
     "DeadTo": defensePlayer2DeadTo,
     },
     {
     "team": "Defense",
     "playerNum": "3",
-    "posX": defensePos3X,
-    "posY": defensePos3Y,
+    "posX": defenseStep1Pos3X,
+    "posY": defenseStep1Pos3Y,
     "Dead": defensePlayer3Dead,
     "DeadTo": defensePlayer3DeadTo,
     },
     {
     "team": "Defense",
     "playerNum": "4",
-    "posX": defensePos4X,
-    "posY": defensePos4Y,
+    "posX": defenseStep1Pos4X,
+    "posY": defenseStep1Pos4Y,
     "Dead": defensePlayer4Dead,
     "DeadTo": defensePlayer4DeadTo,
     },
     {
     "team": "Defense",
     "playerNum": "5",
-    "posX": defensePos5X,
-    "posY": defensePos5Y,
+    "posX": defenseStep1Pos5X,
+    "posY": defenseStep1Pos5Y,
     "Dead": defensePlayer5Dead,
     "DeadTo": defensePlayer5DeadTo,
     },
@@ -850,3 +924,33 @@ round1Layout = (
 with open("round1Phase.json", "w") as f:
     json.dump(round1Layout, f, indent=4)
 print("json file created")
+print("json file created")
+
+print("1.1 genorating")
+#if attackTeamDead == False:
+#    if defenseTeamDead == False:
+#        print("Printing Attack Moves")
+#        attackStep1BondaryCheck1()
+#        attackStep1BondaryCheck2()
+#        attackStep1BondaryCheck3()
+#        attackStep1BondaryCheck4()
+#        attackStep1BondaryCheck5()
+#        teamAttacksideCheck()
+#        print("Printing Defense Moves")
+#        defenseStep1BondaryCheck1()
+#        defenseStep1BondaryCheck2()
+#        defenseStep1BondaryCheck3()
+#        defenseStep1BondaryCheck4()
+#        defenseStep1BondaryCheck5()
+#        teamDefensesideCheck()
+
+#    with open("round1.1Phase.json", "w") as f:
+#        json.dump(round1Layout, f, indent=4)
+
+#if attackTeamDead == True:
+#    if defenseTeamDead == True:
+#        print("Round Finished")
+
+
+
+
